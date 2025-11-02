@@ -14,11 +14,11 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <a href="#home" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            <a href="/" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Home className="h-4 w-4" />
               Home
             </a>
-            <a href="#products" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            <a href="/products" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Package className="h-4 w-4" />
               Products
             </a>
@@ -26,7 +26,7 @@ export const Navbar = () => {
               <BookOpen className="h-4 w-4" />
               Manuals
             </a>
-            <a href="#status" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            <a href="/status" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Activity className="h-4 w-4" />
               Status
             </a>

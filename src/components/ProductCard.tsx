@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   title: string;
@@ -12,6 +13,7 @@ interface ProductCardProps {
   lastUpdate: string;
   price: string;
   featured?: boolean;
+  link?: string;
 }
 
 export const ProductCard = ({
@@ -23,6 +25,7 @@ export const ProductCard = ({
   lastUpdate,
   price,
   featured = false,
+  link = "#",
 }: ProductCardProps) => {
   return (
     <Card className="group relative overflow-hidden bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow-primary">
@@ -74,7 +77,7 @@ export const ProductCard = ({
           </div>
         </div>
 
-        <div className="flex items-center justify-between pt-4 border-t border-border">
+        <div className="flex items-center justify-between pt-4 border-t border-border mb-4">
           <div>
             <div className="text-xs text-muted-foreground mb-1">Starting from</div>
             <div className="text-2xl font-bold text-primary">{price}</div>
@@ -83,6 +86,10 @@ export const ProductCard = ({
             GET ACCESS
           </Button>
         </div>
+        
+        <Link to={link} className="text-sm text-muted-foreground hover:text-primary transition-colors block text-center">
+          More information
+        </Link>
       </div>
     </Card>
   );
