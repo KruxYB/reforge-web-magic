@@ -27,8 +27,8 @@ export const HeroSection = () => {
         </div>
 
         {/* Main headline */}
-        <div className="text-center max-w-6xl mx-auto mb-16">
-          <h1 className="text-5xl md:text-8xl font-extrabold mb-6 leading-[1.05]">
+        <div className="text-center max-w-6xl mx-auto mb-12">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-[1.05]">
             Turn Every Battle Into A Win
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -36,73 +36,39 @@ export const HeroSection = () => {
           </p>
         </div>
 
-        {/* Feature highlights */}
+        {/* Feature highlights in bordered boxes */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
-          <div className="text-center">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Shield className="h-8 w-8 text-primary" />
+          <div className="flex items-center gap-4 p-6 rounded-lg border border-primary/20 bg-primary/5">
+            <Shield className="h-8 w-8 text-primary shrink-0" />
+            <div>
+              <h3 className="font-semibold text-lg">Undetected</h3>
+              <p className="text-sm text-muted-foreground">Stay safe with our advanced protection</p>
             </div>
-            <h3 className="text-xl font-bold mb-2">Undetected</h3>
-            <p className="text-muted-foreground">Stay safe with our advanced protection</p>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Zap className="h-8 w-8 text-primary" />
+          <div className="flex items-center gap-4 p-6 rounded-lg border border-primary/20 bg-primary/5">
+            <Zap className="h-8 w-8 text-primary shrink-0" />
+            <div>
+              <h3 className="font-semibold text-lg">Instant Delivery</h3>
+              <p className="text-sm text-muted-foreground">Get access immediately after purchase</p>
             </div>
-            <h3 className="text-xl font-bold mb-2">Instant Delivery</h3>
-            <p className="text-muted-foreground">Get access immediately after purchase</p>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Clock className="h-8 w-8 text-primary" />
+          <div className="flex items-center gap-4 p-6 rounded-lg border border-primary/20 bg-primary/5">
+            <Clock className="h-8 w-8 text-primary shrink-0" />
+            <div>
+              <h3 className="font-semibold text-lg">24/7 Support</h3>
+              <p className="text-sm text-muted-foreground">Always here to help you succeed</p>
             </div>
-            <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
-            <p className="text-muted-foreground">Always here to help you succeed</p>
           </div>
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <Button size="lg" className="text-base px-8" asChild>
             <Link to="/products">View our Store →</Link>
           </Button>
           <Button size="lg" variant="outline" className="text-base px-8 border-primary/50 hover:bg-primary/10" asChild>
             <Link to="/status">Check Status</Link>
           </Button>
-        </div>
-
-        {/* Stats row */}
-        <div className="border-t border-border/60 pt-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-center">
-            <div>
-              <div className="flex justify-center mb-3">
-                <Activity className="h-8 w-8 text-primary" />
-              </div>
-              <div className="text-2xl md:text-4xl font-bold mb-2 text-primary">99.9%</div>
-              <div className="text-sm text-muted-foreground">Uptime</div>
-            </div>
-            <div>
-              <div className="flex justify-center mb-3">
-                <Package className="h-8 w-8 text-primary" />
-              </div>
-              <div className="text-2xl md:text-4xl font-bold mb-2 text-primary">15,931</div>
-              <div className="text-sm text-muted-foreground">Products Sold</div>
-            </div>
-            <div>
-              <div className="flex justify-center mb-3">
-                <Star className="h-8 w-8 text-primary" />
-              </div>
-              <div className="text-2xl md:text-4xl font-bold mb-2 text-primary">4.98</div>
-              <div className="text-sm text-muted-foreground">Average Rating</div>
-            </div>
-            <div>
-              <div className="flex justify-center mb-3">
-                <Headphones className="h-8 w-8 text-primary" />
-              </div>
-              <div className="text-2xl md:text-4xl font-bold mb-2 text-primary">24/7</div>
-              <div className="text-sm text-muted-foreground">Support</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
