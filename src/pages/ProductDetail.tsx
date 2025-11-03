@@ -519,9 +519,9 @@ const ProductDetail = () => {
                 open={purchaseDialogOpen}
                 onOpenChange={setPurchaseDialogOpen}
                 productName={current.name}
-                packageName={packages.find(p => p.id === selectedPackage)?.name || ""}
-                price={packages.find(p => p.id === selectedPackage)?.price || ""}
-                variantId={getVariantId(slug, selectedPackage)}
+                packageName={(packages.find(p => p.id === selectedPackage) ?? packages[0])?.name || ""}
+                price={(packages.find(p => p.id === selectedPackage) ?? packages[0])?.price || ""}
+                variantId={getVariantId(slug, (packages.find(p => p.id === selectedPackage) ?? packages[0])?.id || "")}
               />
             </div>
           </div>
