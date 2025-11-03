@@ -1,4 +1,4 @@
-import { Home, Package, HelpCircle, Activity } from "lucide-react";
+import { Home, Package, HelpCircle, Activity, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import sgLogo from "@/assets/sg-logo.png";
 
@@ -37,6 +37,7 @@ export const Navbar = () => {
 
           {/* Right: Discord Button */}
           <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <MessageCircle className="h-4 w-4 mr-2" />
             Discord
           </Button>
         </div>

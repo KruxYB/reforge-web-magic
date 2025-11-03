@@ -3,8 +3,8 @@ import { Activity, Package, Star, Headphones } from "lucide-react";
 export const StatsSection = () => {
   const stats = [
     { icon: Activity, value: "99.9%", label: "Uptime", color: "text-primary" },
-    { icon: Package, value: "15,931", label: "Products Sold", color: "text-primary" },
-    { icon: Star, value: "4.98", label: "Average Rating", color: "text-primary" },
+    { icon: Package, value: "2,256", label: "Products Sold", color: "text-primary" },
+    { icon: Star, value: "4.99", label: "Average Rating", color: "text-primary" },
     { icon: Headphones, value: "24/7", label: "Support", color: "text-primary" },
   ];
 

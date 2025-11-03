@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <Badge variant="outline" className="px-6 py-2 text-sm border-primary/50 bg-primary/10">
             <Shield className="h-4 w-4 mr-2" />
-            Trusted by 15,000+ Gamers
+            Trusted by 5,000+ Gamers
           </Badge>
           <Badge variant="outline" className="px-6 py-2 text-sm border-accent/50 bg-accent/10">
             <Users className="h-4 w-4 mr-2" />
@@ -89,14 +89,14 @@ export const HeroSection = () => {
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <Package className="h-5 w-5 text-primary" />
-                <div className="text-2xl md:text-3xl font-bold text-primary">15,931</div>
+                <div className="text-2xl md:text-3xl font-bold text-primary">2,256</div>
               </div>
               <div className="text-xs text-muted-foreground">Products Sold</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <Star className="h-5 w-5 text-primary" />
-                <div className="text-2xl md:text-3xl font-bold text-primary">4.98</div>
+                <div className="text-2xl md:text-3xl font-bold text-primary">4.99</div>
               </div>
               <div className="text-xs text-muted-foreground">Average Rating</div>
             </div>

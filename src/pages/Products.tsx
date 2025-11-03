@@ -16,7 +16,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$29.99",
+      price: "$14.99",
       link: "/rust-internal",
     },
     {
@@ -27,7 +27,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$24.99",
+      price: "$7.99",
       link: "/mek-rust",
     },
     {
@@ -38,7 +38,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$19.99",
+      price: "$7.99",
       link: "/disconnect-rust",
     },
     // BO6 Products
@@ -50,7 +50,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$34.99",
+      price: "$5.99",
       link: "/bo6-internal",
     },
     {
@@ -64,17 +64,6 @@ const Products = () => {
       price: "$14.99",
       link: "/bo6-unlock-all",
     },
-    {
-      title: "ZeroAim BO6",
-      category: "bo6",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
-      anticheat: "Ricochet",
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "Never",
-      lastUpdate: "few days ago",
-      price: "$29.99",
-      link: "/zeroaim-bo6",
-    },
     // Fortnite Products
     {
       title: "Fortnite Ultimate",
@@ -84,7 +73,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$24.99",
+      price: "$5.99",
       link: "/fortnite-ultimate",
     },
     {
@@ -95,19 +84,8 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$19.99",
+      price: "$8.99",
       link: "/disconnect-fortnite",
-    },
-    {
-      title: "Venom Fortnite",
-      category: "fortnite",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
-      anticheat: "BattlEye",
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "Never",
-      lastUpdate: "few days ago",
-      price: "$27.99",
-      link: "/venom-fortnite",
     },
     // R6 Products
     {
@@ -118,7 +96,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$22.99",
+      price: "$5.99",
       link: "/inferno-r6",
     },
     {
@@ -129,7 +107,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$12.99",
+      price: "$4.99",
       link: "/r6-unlock-all",
     },
     {
@@ -140,7 +118,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$26.99",
+      price: "$4.99",
       link: "/exodus-delta-force",
     },
     // Other Products
@@ -152,7 +130,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$28.99",
+      price: "$3.99",
       link: "/exodus-apex",
     },
     {
@@ -163,7 +141,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$32.99",
+      price: "$6.99",
       link: "/predator-marvel-rivals",
     },
     {
@@ -174,7 +152,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$31.99",
+      price: "$2.49",
       link: "/predator-cs2",
     },
     // Valorant Products
@@ -186,33 +164,22 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$18.99",
+      price: "$5.99",
       link: "/valorant-colorbot",
     },
     // Spoofer Products
     {
-      title: "Perm Spoofer V1",
+      title: "Perm Spoofer",
       category: "spoofer",
       image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$49.99",
+      price: "$19.99",
       featured: true,
       featuredText: "CUSTOMER FAVORITE",
-      link: "/perm-spoofer-v1",
-    },
-    {
-      title: "Perm Spoofer V2",
-      category: "spoofer",
-      image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
-      anticheat: "ALL AC",
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "Never",
-      lastUpdate: "few days ago",
-      price: "$59.99",
-      link: "/perm-spoofer-v2",
+      link: "/perm-spoofer",
     },
     {
       title: "Exodus Temp Spoofer",
@@ -222,7 +189,7 @@ const Products = () => {
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$15.99",
+      price: "$3.99",
       link: "/exodus-temp-spoofer",
     },
   ];

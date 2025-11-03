@@ -15,204 +15,289 @@ const ProductDetail = () => {
   const slug = location.pathname.replace("/", "");
 
   const productMap = {
-    rust: {
-      name: "Rust",
-      images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
-      anticheat: "EAC",
-      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
-      starting: "$13.99",
-    },
     "rust-internal": {
       name: "Rust Internal",
       images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
       anticheat: "EAC",
-      prices: { week: "$29.99", month: "$49.99", lifetime: "$89.99" },
-      starting: "$29.99",
+      packages: [
+        { id: "3day", name: "3 Days", days: 3, price: "$14.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$29.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$59.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$229.99" },
+      ],
+      starting: "$14.99",
     },
     "mek-rust": {
       name: "Mek Rust",
       images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
       anticheat: "EAC",
-      prices: { week: "$24.99", month: "$44.99", lifetime: "$79.99" },
-      starting: "$24.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$7.99" },
+        { id: "3day", name: "3 Days", days: 3, price: "$17.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$29.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$59.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$249.99" },
+      ],
+      starting: "$7.99",
     },
     "disconnect-rust": {
       name: "Disconnect Rust",
       images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
       anticheat: "EAC",
-      prices: { week: "$19.99", month: "$39.99", lifetime: "$69.99" },
-      starting: "$19.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$7.99" },
+        { id: "3day", name: "3 Days", days: 3, price: "$17.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$29.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$59.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$279.99" },
+      ],
+      starting: "$7.99",
     },
     "bo6-internal": {
       name: "BO6 Internal",
       images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
       anticheat: "Ricochet",
-      prices: { week: "$34.99", month: "$54.99", lifetime: "$99.99" },
-      starting: "$34.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$17.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+      ],
+      starting: "$5.99",
     },
     "bo6-unlock-all": {
       name: "BO6 Unlock All",
       images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
       anticheat: "Ricochet",
-      prices: { week: "$14.99", month: "$24.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$14.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$24.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$14.99",
-    },
-    "zeroaim-bo6": {
-      name: "ZeroAim BO6",
-      images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
-      anticheat: "Ricochet",
-      prices: { week: "$29.99", month: "$49.99", lifetime: "$89.99" },
-      starting: "$29.99",
     },
     "fortnite-ultimate": {
       name: "Fortnite Ultimate",
       images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
       anticheat: "BattlEye",
-      prices: { week: "$24.99", month: "$44.99", lifetime: "$79.99" },
-      starting: "$24.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
+        { id: "3day", name: "3 Days", days: 3, price: "$14.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$24.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$49.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$199.99" },
+      ],
+      starting: "$5.99",
     },
     "disconnect-fortnite": {
       name: "Disconnect Fortnite",
       images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
       anticheat: "BattlEye",
-      prices: { week: "$19.99", month: "$39.99", lifetime: "$69.99" },
-      starting: "$19.99",
-    },
-    "venom-fortnite": {
-      name: "Venom Fortnite",
-      images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
-      anticheat: "BattlEye",
-      prices: { week: "$27.99", month: "$47.99", lifetime: "$84.99" },
-      starting: "$27.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$8.99" },
+        { id: "3day", name: "3 Days", days: 3, price: "$17.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$34.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$64.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$279.99" },
+      ],
+      starting: "$8.99",
     },
     "inferno-r6": {
       name: "Inferno R6",
       images: ["https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80", "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80"],
       anticheat: "BattlEye",
-      prices: { week: "$22.99", month: "$42.99", lifetime: "$74.99" },
-      starting: "$22.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$29.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$59.99" },
+      ],
+      starting: "$5.99",
     },
     "r6-unlock-all": {
       name: "R6 Unlock All",
       images: ["https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80", "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80"],
       anticheat: "BattlEye",
-      prices: { week: "$12.99", month: "$22.99", lifetime: "$39.99" },
-      starting: "$12.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$4.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$19.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$39.99" },
+      ],
+      starting: "$4.99",
     },
     "exodus-delta-force": {
       name: "Exodus Delta Force",
       images: ["https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80", "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80"],
       anticheat: "BattlEye",
-      prices: { week: "$26.99", month: "$46.99", lifetime: "$82.99" },
-      starting: "$26.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$4.99" },
+        { id: "3day", name: "3 Days", days: 3, price: "$9.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$19.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$39.99" },
+      ],
+      starting: "$4.99",
     },
     "exodus-apex": {
       name: "Exodus Apex",
       images: ["https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80", "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80"],
       anticheat: "EAC",
-      prices: { week: "$28.99", month: "$48.99", lifetime: "$86.99" },
-      starting: "$28.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$3.99" },
+        { id: "3day", name: "3 Days", days: 3, price: "$6.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$17.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$34.99" },
+      ],
+      starting: "$3.99",
     },
     "predator-marvel-rivals": {
       name: "Predator Marvel Rivals",
       images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
       anticheat: "Ricochet",
-      prices: { week: "$32.99", month: "$52.99", lifetime: "$94.99" },
-      starting: "$32.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$6.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$12.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$24.99" },
+        { id: "365day", name: "365 Days", days: 365, price: "$99.99" },
+      ],
+      starting: "$6.99",
     },
     "predator-cs2": {
       name: "Predator CS2",
       images: ["https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1200&q=80", "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1200&q=80"],
       anticheat: "VAC",
-      prices: { week: "$31.99", month: "$51.99", lifetime: "$92.99" },
-      starting: "$31.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$2.49" },
+        { id: "7day", name: "7 Days", days: 7, price: "$4.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$7.99" },
+        { id: "365day", name: "1 Year", days: 365, price: "$59.99" },
+      ],
+      starting: "$2.49",
     },
     "valorant-colorbot": {
       name: "Valorant Colorbot",
       images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
       anticheat: "Vanguard",
-      prices: { week: "$18.99", month: "$38.99", lifetime: "$68.99" },
-      starting: "$18.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$17.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$89.99" },
+      ],
+      starting: "$5.99",
     },
-    "perm-spoofer-v1": {
-      name: "Perm Spoofer V1",
+    "perm-spoofer": {
+      name: "Perm Spoofer",
       images: ["https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80", "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80"],
       anticheat: "ALL AC",
-      prices: { week: "$49.99", month: "$69.99", lifetime: "$119.99" },
-      starting: "$49.99",
-    },
-    "perm-spoofer-v2": {
-      name: "Perm Spoofer V2",
-      images: ["https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80", "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80"],
-      anticheat: "ALL AC",
-      prices: { week: "$59.99", month: "$79.99", lifetime: "$139.99" },
-      starting: "$59.99",
+      packages: [
+        { id: "onetime", name: "One-Time", days: null, price: "$19.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$49.99" },
+      ],
+      starting: "$19.99",
     },
     "exodus-temp-spoofer": {
       name: "Exodus Temp Spoofer",
       images: ["https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80", "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80"],
       anticheat: "ALL AC",
-      prices: { week: "$15.99", month: "$29.99", lifetime: "$49.99" },
-      starting: "$15.99",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$3.99" },
+        { id: "3day", name: "3 Days", days: 3, price: "$7.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$12.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$24.99" },
+      ],
+      starting: "$3.99",
     },
     valorant: {
       name: "Valorant",
       images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
       anticheat: "Vanguard",
-      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$13.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$13.99",
     },
     "hwid-spoofer": {
       name: "HWID Unban",
       images: ["https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80", "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80"],
       anticheat: "ALL AC",
-      prices: { week: "$19.99", month: "$29.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$19.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$19.99",
     },
     "black-ops-6": {
       name: "Black Ops 6",
       images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
       anticheat: "Ricochet",
-      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$13.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$13.99",
     },
     "delta-force": {
       name: "Delta Force",
       images: ["https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80", "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80"],
       anticheat: "BattlEye",
-      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$13.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$13.99",
     },
     "battlefield-2042": {
       name: "Battlefield 2042",
       images: ["https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&q=80", "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&q=80"],
       anticheat: "EAC",
-      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$13.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$13.99",
     },
     "apex-legends": {
       name: "Apex Legends",
       images: ["https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80", "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80"],
       anticheat: "EAC",
-      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$13.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$13.99",
     },
     cs2: {
       name: "CS2",
       images: ["https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1200&q=80", "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1200&q=80"],
       anticheat: "VAC",
-      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$13.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
+      starting: "$13.99",
+    },
+    rust: {
+      name: "Rust",
+      images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
+      anticheat: "EAC",
+      packages: [
+        { id: "7day", name: "7 Days", days: 7, price: "$13.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
       starting: "$13.99",
     },
   } as const;
 
-  const current = productMap[slug as keyof typeof productMap] ?? productMap["rust"];
+  const current = productMap[slug as keyof typeof productMap] ?? productMap["rust-internal"];
 
-  const packages = [
-    { id: "week", name: "1 Week", validity: "Valid for 1 week", price: current.prices.week },
-    { id: "month", name: "1 Month", validity: "Valid for 1 month", price: current.prices.month },
-    { id: "lifetime", name: "Lifetime", validity: "One time payment", price: current.prices.lifetime },
-  ];
+  const packages = current.packages;
 
   const featureSections = {
     TESTED_ON: ["Works for all games."],
@@ -367,25 +452,31 @@ const ProductDetail = () => {
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">Choose your package</h3>
                 <div className="space-y-3">
-                  {packages.map((pkg) => (
-                    <button
-                      key={pkg.id}
-                      onClick={() => setSelectedPackage(pkg.id)}
-                      className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
-                        selectedPackage === pkg.id
-                          ? "border-primary bg-primary/5"
-                          : "border-border hover:border-primary/50"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="font-semibold">{pkg.name}</div>
-                          <div className="text-sm text-muted-foreground">{pkg.validity}</div>
+                  {packages.map((pkg) => {
+                    const dailyRate = pkg.days 
+                      ? `$${(parseFloat(pkg.price.replace('$', '')) / pkg.days).toFixed(2)}/day`
+                      : pkg.name === "One-Time" ? "One-time payment" : "One time payment";
+                    
+                    return (
+                      <button
+                        key={pkg.id}
+                        onClick={() => setSelectedPackage(pkg.id)}
+                        className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
+                          selectedPackage === pkg.id
+                            ? "border-primary bg-primary/5"
+                            : "border-border hover:border-primary/50"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="font-semibold">{pkg.name}</div>
+                            <div className="text-sm text-muted-foreground">{dailyRate}</div>
+                          </div>
+                          <div className="text-xl font-bold text-primary">{pkg.price}</div>
                         </div>
-                        <div className="text-xl font-bold text-primary">{pkg.price}</div>
-                      </div>
-                    </button>
-                  ))}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 

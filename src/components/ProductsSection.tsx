@@ -26,7 +26,7 @@ export const ProductsSection = () => {
       link: "/rust-internal",
     },
     {
-      title: "Permanent Spoofer V1",
+      title: "Perm Spoofer",
       image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
