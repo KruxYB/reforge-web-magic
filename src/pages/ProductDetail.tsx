@@ -7,10 +7,13 @@ import { useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
 import { Footer } from "@/components/Footer";
 import { useLocation } from "react-router-dom";
+import { PurchaseDialog } from "@/components/PurchaseDialog";
+import { getVariantId } from "@/lib/sellhubVariants";
 
 const ProductDetail = () => {
   const [selectedPackage, setSelectedPackage] = useState("week");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [purchaseDialogOpen, setPurchaseDialogOpen] = useState(false);
   const location = useLocation();
   const slug = location.pathname.replace("/", "");
 
@@ -495,10 +498,19 @@ const ProductDetail = () => {
                 </div>
               </div>
 
-              <Button size="lg" className="w-full">
+              <Button size="lg" className="w-full" onClick={() => setPurchaseDialogOpen(true)}>
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Purchase
               </Button>
+              
+              <PurchaseDialog
+                open={purchaseDialogOpen}
+                onOpenChange={setPurchaseDialogOpen}
+                productName={current.name}
+                packageName={packages.find(p => p.id === selectedPackage)?.name || ""}
+                price={packages.find(p => p.id === selectedPackage)?.price || ""}
+                variantId={getVariantId(slug, selectedPackage)}
+              />
             </div>
           </div>
         </div>

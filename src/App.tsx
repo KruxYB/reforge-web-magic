@@ -38,8 +38,7 @@ const App = () => (
           <Route path="/predator-marvel-rivals" element={<ProductDetail />} />
           <Route path="/predator-cs2" element={<ProductDetail />} />
           <Route path="/valorant-colorbot" element={<ProductDetail />} />
-          <Route path="/perm-spoofer-v1" element={<ProductDetail />} />
-          <Route path="/perm-spoofer-v2" element={<ProductDetail />} />
+          <Route path="/perm-spoofer" element={<ProductDetail />} />
           <Route path="/exodus-temp-spoofer" element={<ProductDetail />} />
           <Route path="/valorant" element={<ProductDetail />} />
           <Route path="/hwid-spoofer" element={<ProductDetail />} />
