@@ -13,35 +13,6 @@ export const Footer = () => {
            }}>
       </div>
 
-      {/* Trust badges */}
-      <div className="relative py-12 border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="flex items-center gap-4 p-6 rounded-lg border border-primary/20 bg-primary/5">
-              <Shield className="h-8 w-8 text-primary shrink-0" />
-              <div>
-                <h3 className="font-semibold text-lg">Secure & Undetected</h3>
-                <p className="text-sm text-muted-foreground">99.9% Uptime Guarantee</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-6 rounded-lg border border-primary/20 bg-primary/5">
-              <Clock className="h-8 w-8 text-primary shrink-0" />
-              <div>
-                <h3 className="font-semibold text-lg">24/7 Support</h3>
-                <p className="text-sm text-muted-foreground">Always Here to Help</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-6 rounded-lg border border-primary/20 bg-primary/5">
-              <Users className="h-8 w-8 text-primary shrink-0" />
-              <div>
-                <h3 className="font-semibold text-lg">Trusted by 15K+</h3>
-                <p className="text-sm text-muted-foreground">4.98 Average Rating</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Footer links */}
       <div className="relative py-12">
         <div className="container mx-auto px-4">
