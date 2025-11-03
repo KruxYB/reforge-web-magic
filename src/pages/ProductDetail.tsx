@@ -163,7 +163,7 @@ const ProductDetail = () => {
 
                   <div>
                     <h3 className="text-sm font-medium text-muted-foreground mb-2">SERVICES</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="space-y-2">
                       {featureSections.SERVICES.map((item, i) => (
                         <div key={i} className="flex items-start gap-2">
                           <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
