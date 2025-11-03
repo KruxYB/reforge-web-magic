@@ -1,5 +1,7 @@
-import { Shield, Clock, Users, MessageCircle, Send } from "lucide-react";
+import { Mail, MessageCircle, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import sgLogo from "@/assets/sg-logo.png";
 
 export const Footer = () => {
   return (
@@ -20,9 +22,9 @@ export const Footer = () => {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Shield className="h-8 w-8 text-primary" />
+                <img src={sgLogo} alt="SG Cheats" className="h-8 w-8" />
                 <span className="text-xl font-bold">
-                  GHOSTY <span className="text-primary">Services</span>
+                  SG <span className="text-primary">Cheats</span>
                 </span>
               </div>
               <p className="text-muted-foreground text-sm mb-6">
@@ -130,10 +132,10 @@ export const Footer = () => {
           {/* Bottom bar */}
           <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2025 GHOSTY Services. All rights reserved.
+              © 2025 SG Cheats. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              Made with <span className="text-primary">💙</span> for gamers worldwide
+              Made with <span className="text-primary">💜</span> for gamers worldwide
             </p>
           </div>
         </div>

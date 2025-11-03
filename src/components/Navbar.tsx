@@ -1,5 +1,6 @@
-import { Shield, Home, Package, BookOpen, Activity } from "lucide-react";
+import { Home, Package, BookOpen, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import sgLogo from "@/assets/sg-logo.png";
 
 export const Navbar = () => {
   return (
@@ -8,9 +9,9 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Left: Logo */}
           <div className="flex items-center gap-2">
-            <Shield className="h-8 w-8 text-primary" />
+            <img src={sgLogo} alt="SG Cheats" className="h-8 w-8" />
             <span className="text-xl font-bold">
-              GHOSTY <span className="text-primary">Services</span>
+              SG <span className="text-primary">Cheats</span>
             </span>
           </div>
 

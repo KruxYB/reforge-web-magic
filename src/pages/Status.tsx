@@ -16,7 +16,7 @@ const Status = () => {
   const products = [
     {
       category: "VALORANT",
-      name: "GHOSTY Valorant",
+      name: "SG Valorant",
       price: "$13.99",
       lastDetection: "8+ months ago",
       week: "24/7",
@@ -29,7 +29,7 @@ const Status = () => {
     },
     {
       category: "HWID SPOOFER",
-      name: "GHOSTY HWID Spoofer",
+      name: "SG HWID Spoofer",
       price: "$19.99",
       lastDetection: "Never",
       week: "24/7",
@@ -42,7 +42,7 @@ const Status = () => {
     },
     {
       category: "RUST",
-      name: "GHOSTY Rust",
+      name: "SG Rust",
       price: "$13.99",
       lastDetection: "7+ months ago",
       week: "24/7",
@@ -55,7 +55,7 @@ const Status = () => {
     },
     {
       category: "BLACK OPS 6",
-      name: "GHOSTY BO6",
+      name: "SG BO6",
       price: "$13.99",
       lastDetection: "6+ months ago",
       week: "24/7",
@@ -68,7 +68,7 @@ const Status = () => {
     },
     {
       category: "DELTA FORCE",
-      name: "GHOSTY Delta Force",
+      name: "SG Delta Force",
       price: "$13.99",
       lastDetection: "10+ months ago",
       week: "24/7",

@@ -42,7 +42,7 @@ export const ProductsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="text-sm font-medium text-primary mb-4 tracking-wider uppercase">
-            GHOSTY SERVICES
+            SG CHEATS
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Products</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
