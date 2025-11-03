@@ -242,20 +242,6 @@ const ProductDetail = () => {
     "Battlefield 2042",
   ];
 
-  const relatedProducts = Object.entries(productMap)
-    .filter(([key]) => key !== slug)
-    .slice(0, 3)
-    .map(([key, p]) => ({
-      title: p.name,
-      image: p.images[0],
-      anticheat: p.anticheat,
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "6+ months ago",
-      lastUpdate: "few days ago",
-      price: p.prices.week,
-      featured: true,
-      link: `/${key}`,
-    }));
 
   return (
     <div className="min-h-screen bg-background">
@@ -422,19 +408,6 @@ const ProductDetail = () => {
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Purchase
               </Button>
-            </div>
-          </div>
-
-          {/* Features moved into left column below the image */}
-          {/* ... keep existing code */}
-
-          {/* Related Products */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8">Related Products</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {relatedProducts.map((product, index) => (
-                <ProductCard key={index} {...product} />
-              ))}
             </div>
           </div>
         </div>

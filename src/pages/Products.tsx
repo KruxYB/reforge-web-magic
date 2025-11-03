@@ -1,13 +1,16 @@
 import { Navbar } from "@/components/Navbar";
 import { ProductCard } from "@/components/ProductCard";
-
 import { Footer } from "@/components/Footer";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Products = () => {
+  const [selectedGame, setSelectedGame] = useState<string>("all");
   const products = [
-    // Row 1
+    // Rust Products
     {
       title: "Rust Internal",
+      category: "rust",
       image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -18,6 +21,7 @@ const Products = () => {
     },
     {
       title: "Mek Rust",
+      category: "rust",
       image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -28,6 +32,7 @@ const Products = () => {
     },
     {
       title: "Disconnect Rust",
+      category: "rust",
       image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -36,9 +41,10 @@ const Products = () => {
       price: "$19.99",
       link: "/disconnect-rust",
     },
-    // Row 2
+    // BO6 Products
     {
       title: "BO6 Internal",
+      category: "bo6",
       image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
       anticheat: "Ricochet",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -49,6 +55,7 @@ const Products = () => {
     },
     {
       title: "BO6 Unlock All",
+      category: "bo6",
       image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
       anticheat: "Ricochet",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -59,6 +66,7 @@ const Products = () => {
     },
     {
       title: "ZeroAim BO6",
+      category: "bo6",
       image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
       anticheat: "Ricochet",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -67,9 +75,10 @@ const Products = () => {
       price: "$29.99",
       link: "/zeroaim-bo6",
     },
-    // Row 3
+    // Fortnite Products
     {
       title: "Fortnite Ultimate",
+      category: "fortnite",
       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -80,6 +89,7 @@ const Products = () => {
     },
     {
       title: "Disconnect Fortnite",
+      category: "fortnite",
       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -90,6 +100,7 @@ const Products = () => {
     },
     {
       title: "Venom Fortnite",
+      category: "fortnite",
       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -98,9 +109,10 @@ const Products = () => {
       price: "$27.99",
       link: "/venom-fortnite",
     },
-    // Row 4
+    // R6 Products
     {
       title: "Inferno R6",
+      category: "r6",
       image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=800&q=80",
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -111,6 +123,7 @@ const Products = () => {
     },
     {
       title: "R6 Unlock All",
+      category: "r6",
       image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=800&q=80",
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -121,6 +134,7 @@ const Products = () => {
     },
     {
       title: "Exodus Delta Force",
+      category: "delta-force",
       image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80",
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -129,9 +143,10 @@ const Products = () => {
       price: "$26.99",
       link: "/exodus-delta-force",
     },
-    // Row 5
+    // Other Products
     {
       title: "Exodus Apex",
+      category: "apex",
       image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=800&q=80",
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -142,6 +157,7 @@ const Products = () => {
     },
     {
       title: "Predator Marvel Rivals",
+      category: "marvel-rivals",
       image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
       anticheat: "Ricochet",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -152,6 +168,7 @@ const Products = () => {
     },
     {
       title: "Predator CS2",
+      category: "cs2",
       image: "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=800&q=80",
       anticheat: "VAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -160,9 +177,10 @@ const Products = () => {
       price: "$31.99",
       link: "/predator-cs2",
     },
-    // Row 6
+    // Valorant Products
     {
       title: "Valorant Colorbot",
+      category: "valorant",
       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
       anticheat: "Vanguard",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -171,8 +189,10 @@ const Products = () => {
       price: "$18.99",
       link: "/valorant-colorbot",
     },
+    // Spoofer Products
     {
       title: "Perm Spoofer V1",
+      category: "spoofer",
       image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -185,6 +205,7 @@ const Products = () => {
     },
     {
       title: "Perm Spoofer V2",
+      category: "spoofer",
       image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -193,9 +214,9 @@ const Products = () => {
       price: "$59.99",
       link: "/perm-spoofer-v2",
     },
-    // Row 7
     {
       title: "Exodus Temp Spoofer",
+      category: "spoofer",
       image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -206,12 +227,30 @@ const Products = () => {
     },
   ];
 
+  const gameCategories = [
+    { id: "all", name: "All Products" },
+    { id: "rust", name: "Rust" },
+    { id: "bo6", name: "BO6" },
+    { id: "fortnite", name: "Fortnite" },
+    { id: "r6", name: "Rainbow Six" },
+    { id: "delta-force", name: "Delta Force" },
+    { id: "apex", name: "Apex" },
+    { id: "marvel-rivals", name: "Marvel Rivals" },
+    { id: "cs2", name: "CS2" },
+    { id: "valorant", name: "Valorant" },
+    { id: "spoofer", name: "Spoofers" },
+  ];
+
+  const filteredProducts = selectedGame === "all" 
+    ? products 
+    : products.filter(p => p.category === selectedGame);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <section className="pt-32 pb-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="text-sm font-medium text-primary mb-4 tracking-wider uppercase">
               Premium Products
             </div>
@@ -221,8 +260,21 @@ const Products = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.map((product, index) => (
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {gameCategories.map((category) => (
+              <Button
+                key={category.id}
+                variant={selectedGame === category.id ? "default" : "outline"}
+                onClick={() => setSelectedGame(category.id)}
+                className="transition-all"
+              >
+                {category.name}
+              </Button>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProducts.map((product, index) => (
               <div
                 key={index}
                 className="animate-in fade-in slide-in-from-bottom-4 duration-500"
