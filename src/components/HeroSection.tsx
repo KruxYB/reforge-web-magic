@@ -9,12 +9,6 @@ export const HeroSection = () => {
       {/* Subtle grid background */}
       <div className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(to_right,hsl(var(--border)/0.15)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.15)_1px,transparent_1px)] [background-size:28px_28px]" />
 
-      {/* Glow blobs */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute -top-10 -left-10 w-80 h-80 bg-primary rounded-full blur-[120px] pulse" />
-        <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-accent rounded-full blur-[140px] pulse" />
-      </div>
-
       <div className="container mx-auto px-4 pt-28 pb-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left: Headline & CTAs */}
@@ -36,7 +30,7 @@ export const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="text-base px-8 shadow-glow-primary" asChild>
+              <Button size="lg" className="text-base px-8" asChild>
                 <Link to="/products">View our Store</Link>
               </Button>
               <Button size="lg" variant="outline" className="text-base px-8 border-primary/50 hover:bg-primary/10" asChild>

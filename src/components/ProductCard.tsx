@@ -29,7 +29,7 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <Link to={link} className="block h-full">
-      <Card className="group relative overflow-hidden bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow-primary cursor-pointer h-full">
+      <Card className="group relative overflow-hidden bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 cursor-pointer h-full">
         {featured && (
           <Badge className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground">
             FEATURED
@@ -83,7 +83,7 @@ export const ProductCard = ({
               <div className="text-xs text-muted-foreground mb-1">Starting from</div>
               <div className="text-2xl font-bold text-primary">{price}</div>
             </div>
-            <Button className="shadow-glow-primary">
+            <Button>
               GET ACCESS
             </Button>
           </div>

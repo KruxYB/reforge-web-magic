@@ -105,7 +105,7 @@ export const StatusCard = ({
             </Badge>
 
             <Link to={link}>
-              <Button className="shadow-glow-primary">
+              <Button>
                 Purchase Now
               </Button>
             </Link>

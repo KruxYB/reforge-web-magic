@@ -258,7 +258,7 @@ const ProductDetail = () => {
               </div>
 
               <div className="flex gap-4">
-                <Button size="lg" className="flex-1 shadow-glow-primary">
+                <Button size="lg" className="flex-1">
                   Buy with card
                 </Button>
                 <Button size="lg" variant="outline" className="flex-1">
