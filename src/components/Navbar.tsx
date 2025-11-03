@@ -1,4 +1,4 @@
-import { Home, Package, BookOpen, Activity } from "lucide-react";
+import { Home, Package, HelpCircle, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import sgLogo from "@/assets/sg-logo.png";
 
@@ -25,13 +25,13 @@ export const Navbar = () => {
               <Package className="h-4 w-4" />
               Products
             </a>
-            <a href="#manuals" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
-              <BookOpen className="h-4 w-4" />
-              Manuals
-            </a>
             <a href="/status" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Activity className="h-4 w-4" />
               Status
+            </a>
+            <a href="/#faq" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+              <HelpCircle className="h-4 w-4" />
+              FAQ
             </a>
           </div>
 
