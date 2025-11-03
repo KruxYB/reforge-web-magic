@@ -11,6 +11,7 @@ export const ProductsSection = () => {
       lastUpdate: "few days ago",
       price: "$13.99",
       featured: true,
+      link: "/valorant",
     },
     {
       title: "HWID Spoofer",
@@ -21,6 +22,7 @@ export const ProductsSection = () => {
       lastUpdate: "few days ago",
       price: "$19.99",
       featured: true,
+      link: "/hwid-spoofer",
     },
     {
       title: "Rust",
@@ -31,6 +33,7 @@ export const ProductsSection = () => {
       lastUpdate: "few days ago",
       price: "$16.99",
       featured: true,
+      link: "/rust",
     },
   ];
 

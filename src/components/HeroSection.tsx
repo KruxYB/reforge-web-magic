@@ -11,8 +11,10 @@ export const HeroSection = () => {
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-[100px] animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
       </div>
+      {/* Subtle grid overlay */}
+      <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,hsl(var(--border)/0.15)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.15)_1px,transparent_1px)] [background-size:24px_24px]" />
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-24 relative z-10">
         {/* Trust badges */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <Badge variant="outline" className="px-6 py-2 text-sm border-primary/50 bg-primary/10">
@@ -30,13 +32,9 @@ export const HeroSection = () => {
         </div>
 
         {/* Main headline */}
-        <div className="text-center max-w-5xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-6 duration-1000">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Turn Every Battle
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Into A Win
-            </span>
+        <div className="text-center max-w-6xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-6 duration-1000">
+          <h1 className="text-5xl md:text-8xl font-extrabold mb-6 leading-[1.05]">
+            Turn Every Battle Into A Win
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover how games are meant to be played and enjoyed with undetected, secure, and always updated gaming enhancements.
@@ -76,6 +74,28 @@ export const HeroSection = () => {
           <Button size="lg" variant="outline" className="text-base px-8 border-primary/50 hover:bg-primary/10" asChild>
             <Link to="/status">Check Status</Link>
           </Button>
+        </div>
+
+        {/* Stats row */}
+        <div className="mt-14 border-t border-border/60 pt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-center">
+            <div>
+              <div className="text-2xl font-bold text-primary">99.9%</div>
+              <div className="text-sm text-muted-foreground">Uptime</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-primary">15,931</div>
+              <div className="text-sm text-muted-foreground">Products Sold</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-primary">4.98</div>
+              <div className="text-sm text-muted-foreground">Average Rating</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-primary">24/7</div>
+              <div className="text-sm text-muted-foreground">Support</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

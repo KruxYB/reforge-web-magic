@@ -5,66 +5,123 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, Shield, Zap, Headphones, Star } from "lucide-react";
 import { useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
-import { PaymentMethodsSection } from "@/components/PaymentMethodsSection";
 import { Footer } from "@/components/Footer";
+import { useLocation } from "react-router-dom";
 
 const ProductDetail = () => {
   const [selectedPackage, setSelectedPackage] = useState("week");
+  const location = useLocation();
+  const slug = location.pathname.replace("/", "");
+
+  const productMap = {
+    rust: {
+      name: "Rust",
+      image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80",
+      anticheat: "EAC",
+      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$13.99",
+    },
+    valorant: {
+      name: "Valorant",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80",
+      anticheat: "Vanguard",
+      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$13.99",
+    },
+    "hwid-spoofer": {
+      name: "HWID Unban",
+      image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80",
+      anticheat: "ALL AC",
+      prices: { week: "$19.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$19.99",
+    },
+    "black-ops-6": {
+      name: "Black Ops 6",
+      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80",
+      anticheat: "Ricochet",
+      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$13.99",
+    },
+    "delta-force": {
+      name: "Delta Force",
+      image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80",
+      anticheat: "BattlEye",
+      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$13.99",
+    },
+    "battlefield-2042": {
+      name: "Battlefield 2042",
+      image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&q=80",
+      anticheat: "EAC",
+      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$13.99",
+    },
+    "apex-legends": {
+      name: "Apex Legends",
+      image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80",
+      anticheat: "EAC",
+      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$13.99",
+    },
+    cs2: {
+      name: "CS2",
+      image: "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1200&q=80",
+      anticheat: "VAC",
+      prices: { week: "$13.99", month: "$29.99", lifetime: "$44.99" },
+      starting: "$13.99",
+    },
+  } as const;
+
+  const current = productMap[slug as keyof typeof productMap] ?? productMap["rust"];
 
   const packages = [
-    { id: "week", name: "1 Week", validity: "Valid for 1 week", price: "$13.99" },
-    { id: "month", name: "1 Month", validity: "Valid for 1 month", price: "$29.99" },
-    { id: "lifetime", name: "Lifetime", validity: "One time payment", price: "$44.99" },
+    { id: "week", name: "1 Week", validity: "Valid for 1 week", price: current.prices.week },
+    { id: "month", name: "1 Month", validity: "Valid for 1 month", price: current.prices.month },
+    { id: "lifetime", name: "Lifetime", validity: "One time payment", price: current.prices.lifetime },
   ];
 
-  const features = {
-    aim: [
-      "Aim", "Visible Check", "Draw FOV", "AimBot", "Recoil Control System",
-      "RGB Fov", "Draw Recoil Crosshair", "Snapline Check", "Recoil Crosshair",
-      "No Spread", "Aim Radius", "Smoothness", "Aim-Bone"
+  const featureSections = {
+    TESTED_ON: ["Works for all games."],
+    SERVICES: [
+      "Instant Delivery",
+      "HWID Unban Guide for All Games",
+      "VPK Bypass – TPM / Secure Boot / HVCI",
+      "Customer Community Chat",
+      "24/7 Customer Support",
+      "One Click Unban – Automated",
+      "E Plan Fix",
+      "Customer HWID Reset Tool",
     ],
-    visuals: [
-      "ESP", "Skeleton", "Snapline", "Health", "Head", "Distance",
-      "Health-Bar", "Esp Distance", "2D Box", "Player Name", "Corner Box",
-      "3D Box", "Weapon Name", "Radar", "Dormant"
-    ],
+    SUPPORTED_MOTHERBOARDS: ["All motherboards are supported."],
   };
 
-  const relatedProducts = [
-    {
-      title: "Valorant",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
-      anticheat: "Vanguard",
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "8+ months ago",
-      lastUpdate: "few days ago",
-      price: "$13.99",
-      featured: true,
-      link: "/valorant",
-    },
-    {
-      title: "HWID Spoofer",
-      image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
-      anticheat: "ALL AC",
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "Never",
-      lastUpdate: "few days ago",
-      price: "$19.99",
-      featured: true,
-      link: "/hwid-spoofer",
-    },
-    {
-      title: "Black Ops 6",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
-      anticheat: "Ricochet",
+  const supportedGames = [
+    "Fortnite",
+    "Call of Duty: Black Ops 6",
+    "Apex Legends",
+    "Rust",
+    "Delta Force",
+    "Call of Duty: Warzone",
+    "Valorant",
+    "Rainbow Six Siege",
+    "CS2",
+    "Battlefield 2042",
+  ];
+
+  const relatedProducts = Object.entries(productMap)
+    .filter(([key]) => key !== slug)
+    .slice(0, 3)
+    .map(([key, p]) => ({
+      title: p.name,
+      image: p.image,
+      anticheat: p.anticheat,
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "6+ months ago",
       lastUpdate: "few days ago",
-      price: "$13.99",
+      price: p.prices.week,
       featured: true,
-      link: "/black-ops-6",
-    },
-  ];
+      link: `/${key}`,
+    }));
 
   return (
     <div className="min-h-screen bg-background">
@@ -72,21 +129,76 @@ const ProductDetail = () => {
       <section className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-            {/* Product Image */}
+            {/* Product Image and left column content */}
             <div className="relative">
               <Badge className="absolute top-4 left-4 z-10 bg-accent text-accent-foreground">
                 Undetected
               </Badge>
               <Card className="overflow-hidden border-border/50">
                 <img
-                  src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80"
-                  alt="Rust"
+                  src={current.image}
+                  alt={current.name}
                   className="w-full aspect-video object-cover"
                 />
               </Card>
               <Badge variant="outline" className="mt-4 text-primary border-primary">
-                Starting at $13.99
+                Starting at {current.starting}
               </Badge>
+
+              {/* Product Features below the image (top-to-bottom) */}
+              <Card className="p-6 mt-6 border-border/50">
+                <h2 className="text-xl font-semibold mb-4 text-primary">Product Features</h2>
+                <div className="space-y-5">
+                  <div>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-2">TESTED ON</h3>
+                    <div className="space-y-2">
+                      {featureSections.TESTED_ON.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-2">SERVICES</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {featureSections.SERVICES.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-2">SUPPORTED MOTHERBOARDS</h3>
+                    <div className="space-y-2">
+                      {featureSections.SUPPORTED_MOTHERBOARDS.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Supported Games */}
+              <Card className="p-6 mt-6 border-border/50">
+                <h2 className="text-xl font-semibold mb-4 text-primary">Supported Games</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {supportedGames.map((game, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">{game}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
             </div>
 
             {/* Product Info */}
@@ -94,7 +206,7 @@ const ProductDetail = () => {
               <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
                 Premium Product
               </Badge>
-              <h1 className="text-4xl font-bold mb-4">Rust</h1>
+              <h1 className="text-4xl font-bold mb-4">{current.name}</h1>
               <div className="flex items-center gap-2 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star} className="h-5 w-5 fill-primary text-primary" />
@@ -156,50 +268,8 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          {/* Product Features */}
-          <Card className="p-8 mb-12 border-border/50">
-            <h2 className="text-2xl font-bold mb-6 text-primary">Product Features</h2>
-            
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-primary">AIM</h3>
-                <div className="space-y-2">
-                  {features.aim.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-primary">VISUALS</h3>
-                <div className="space-y-2">
-                  {features.visuals.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-6 border-t border-border">
-                <h3 className="text-xl font-semibold mb-4 text-primary">GENERAL</h3>
-                <div className="space-y-3">
-                  <div>
-                    <span className="font-medium">AC Supported: </span>
-                    <span className="text-muted-foreground">We're completely undetected across any AC.</span>
-                  </div>
-                  <div>
-                    <span className="font-medium">Windows Versions We Support: </span>
-                    <span className="text-muted-foreground">We Support All Windows 10 and All Windows 11 Versions ranging from 1909 - 24h2</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Card>
+          {/* Features moved into left column below the image */}
+          {/* ... keep existing code */}
 
           {/* Related Products */}
           <div>
@@ -212,7 +282,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
-      <PaymentMethodsSection />
+      
       <Footer />
     </div>
   );
