@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, Shield, Zap, Headphones, Star } from "lucide-react";
 import { useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
+import { PaymentMethodsSection } from "@/components/PaymentMethodsSection";
+import { Footer } from "@/components/Footer";
 
 const ProductDetail = () => {
   const [selectedPackage, setSelectedPackage] = useState("week");
@@ -210,6 +212,8 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
+      <PaymentMethodsSection />
+      <Footer />
     </div>
   );
 };

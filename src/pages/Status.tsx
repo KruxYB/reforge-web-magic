@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { StatusCard } from "@/components/StatusCard";
 import { Badge } from "@/components/ui/badge";
+import { PaymentMethodsSection } from "@/components/PaymentMethodsSection";
+import { Footer } from "@/components/Footer";
 
 const Status = () => {
   const statusLegend = [
@@ -120,6 +122,8 @@ const Status = () => {
           </div>
         </div>
       </section>
+      <PaymentMethodsSection />
+      <Footer />
     </div>
   );
 };

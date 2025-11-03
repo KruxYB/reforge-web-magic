@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { ProductCard } from "@/components/ProductCard";
+import { PaymentMethodsSection } from "@/components/PaymentMethodsSection";
+import { Footer } from "@/components/Footer";
 
 const Products = () => {
   const products = [
@@ -121,6 +123,8 @@ const Products = () => {
           </div>
         </div>
       </section>
+      <PaymentMethodsSection />
+      <Footer />
     </div>
   );
 };

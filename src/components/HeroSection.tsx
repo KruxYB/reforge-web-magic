@@ -1,6 +1,7 @@
 import { Shield, Users, CheckCircle2, Zap, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -69,11 +70,11 @@ export const HeroSection = () => {
 
         {/* CTA buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
-          <Button size="lg" className="text-base px-8 shadow-glow-primary">
-            View our Store
+          <Button size="lg" className="text-base px-8 shadow-glow-primary" asChild>
+            <Link to="/products">View our Store</Link>
           </Button>
-          <Button size="lg" variant="outline" className="text-base px-8 border-primary/50 hover:bg-primary/10">
-            Check Status
+          <Button size="lg" variant="outline" className="text-base px-8 border-primary/50 hover:bg-primary/10" asChild>
+            <Link to="/status">Check Status</Link>
           </Button>
         </div>
       </div>
