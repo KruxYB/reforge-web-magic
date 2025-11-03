@@ -13,6 +13,7 @@ interface ProductCardProps {
   lastUpdate: string;
   price: string;
   featured?: boolean;
+  featuredText?: string;
   link?: string;
 }
 
@@ -25,6 +26,7 @@ export const ProductCard = ({
   lastUpdate,
   price,
   featured = false,
+  featuredText = "FEATURED",
   link = "#",
 }: ProductCardProps) => {
   return (
@@ -32,7 +34,7 @@ export const ProductCard = ({
       <Card className="group relative overflow-hidden bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 cursor-pointer h-full">
         {featured && (
           <Badge className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground">
-            FEATURED
+            {featuredText}
           </Badge>
         )}
         

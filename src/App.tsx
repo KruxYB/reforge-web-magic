@@ -22,6 +22,25 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/status" element={<Status />} />
           <Route path="/rust" element={<ProductDetail />} />
+          <Route path="/rust-internal" element={<ProductDetail />} />
+          <Route path="/mek-rust" element={<ProductDetail />} />
+          <Route path="/disconnect-rust" element={<ProductDetail />} />
+          <Route path="/bo6-internal" element={<ProductDetail />} />
+          <Route path="/bo6-unlock-all" element={<ProductDetail />} />
+          <Route path="/zeroaim-bo6" element={<ProductDetail />} />
+          <Route path="/fortnite-ultimate" element={<ProductDetail />} />
+          <Route path="/disconnect-fortnite" element={<ProductDetail />} />
+          <Route path="/venom-fortnite" element={<ProductDetail />} />
+          <Route path="/inferno-r6" element={<ProductDetail />} />
+          <Route path="/r6-unlock-all" element={<ProductDetail />} />
+          <Route path="/exodus-delta-force" element={<ProductDetail />} />
+          <Route path="/exodus-apex" element={<ProductDetail />} />
+          <Route path="/predator-marvel-rivals" element={<ProductDetail />} />
+          <Route path="/predator-cs2" element={<ProductDetail />} />
+          <Route path="/valorant-colorbot" element={<ProductDetail />} />
+          <Route path="/perm-spoofer-v1" element={<ProductDetail />} />
+          <Route path="/perm-spoofer-v2" element={<ProductDetail />} />
+          <Route path="/exodus-temp-spoofer" element={<ProductDetail />} />
           <Route path="/valorant" element={<ProductDetail />} />
           <Route path="/hwid-spoofer" element={<ProductDetail />} />
           <Route path="/black-ops-6" element={<ProductDetail />} />

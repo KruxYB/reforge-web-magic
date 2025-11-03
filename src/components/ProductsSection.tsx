@@ -3,37 +3,38 @@ import { ProductCard } from "./ProductCard";
 export const ProductsSection = () => {
   const products = [
     {
-      title: "Valorant",
+      title: "Fortnite Ultimate",
       image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
-      anticheat: "Vanguard",
+      anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "8+ months ago",
+      lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$13.99",
-      featured: true,
-      link: "/valorant",
+      price: "$24.99",
+      featured: false,
+      link: "/fortnite-ultimate",
     },
     {
-      title: "HWID Spoofer",
+      title: "Rust Internal",
+      image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
+      anticheat: "EAC",
+      features: ["Tournament/Ranked", "Windows 10/11"],
+      lastDetection: "Never",
+      lastUpdate: "few days ago",
+      price: "$29.99",
+      featured: true,
+      featuredText: "CUSTOMER FAVORITE",
+      link: "/rust-internal",
+    },
+    {
+      title: "Permanent Spoofer V1",
       image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
       lastUpdate: "few days ago",
-      price: "$19.99",
-      featured: true,
-      link: "/hwid-spoofer",
-    },
-    {
-      title: "Rust",
-      image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
-      anticheat: "EAC",
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "6+ months ago",
-      lastUpdate: "few days ago",
-      price: "$16.99",
-      featured: true,
-      link: "/rust",
+      price: "$49.99",
+      featured: false,
+      link: "/perm-spoofer-v1",
     },
   ];
 
@@ -44,7 +45,7 @@ export const ProductsSection = () => {
           <div className="text-sm font-medium text-primary mb-4 tracking-wider uppercase">
             SG CHEATS
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Products</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Products</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Undetected, Secure & Always Updated Gaming Cheats For Every Battle
           </p>
