@@ -20,11 +20,26 @@ export const PurchaseDialog = ({
 }: PurchaseDialogProps) => {
   useEffect(() => {
     // Load SellHub script when dialog opens
-    if (open && !document.querySelector('script[src*="sellhub"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.sellhub.cx/embed/v1/sellhub.js';
-      script.async = true;
-      document.body.appendChild(script);
+    if (open) {
+      const existingScript = document.querySelector('script[src*="sellhub"]');
+      
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.sellhub.cx/embed/v1/sellhub.js';
+        script.async = true;
+        script.onload = () => {
+          console.log('SellHub script loaded successfully');
+        };
+        script.onerror = () => {
+          console.error('Failed to load SellHub script');
+        };
+        document.body.appendChild(script);
+      } else {
+        // Script already exists, trigger a re-scan if SellHub is available
+        if ((window as any).SellHub?.init) {
+          (window as any).SellHub.init();
+        }
+      }
     }
   }, [open]);
 
@@ -70,19 +85,50 @@ export const PurchaseDialog = ({
           <div className="border-t pt-4 space-y-3">
             <button
               data-sellhub-variant={variantId}
-              className="w-full rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors py-3 px-6 font-semibold"
+              style={{
+                borderRadius: "10px",
+                backgroundColor: "#ffffff",
+                color: "#000000",
+                padding: "12px 24px",
+                width: "100%",
+                fontWeight: "600",
+                cursor: "pointer",
+                border: "none",
+              }}
             >
               Buy Now
             </button>
             <button
               data-sellhub-cart-variant={variantId}
-              className="w-full rounded-lg border-2 border-primary text-primary hover:bg-primary/10 transition-colors py-3 px-6 font-semibold"
+              style={{
+                borderRadius: "10px",
+                backgroundColor: "#ffffff",
+                color: "#000000",
+                padding: "12px 24px",
+                width: "100%",
+                fontWeight: "600",
+                cursor: "pointer",
+                border: "none",
+              }}
             >
               Add to Cart
             </button>
             <button
               data-sellhub-open-cart-store-url="https://sgcheats.sellhub.cx"
-              className="w-full rounded-lg border border-border hover:bg-accent transition-colors py-3 px-6 font-semibold flex items-center justify-center gap-2"
+              style={{
+                borderRadius: "10px",
+                backgroundColor: "#ffffff",
+                color: "#000000",
+                padding: "12px 24px",
+                width: "100%",
+                fontWeight: "600",
+                cursor: "pointer",
+                border: "none",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+              }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="8" cy="21" r="1"/>
