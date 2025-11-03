@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
       {/* Subtle grid background */}
-      <div className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(to_right,hsl(var(--border)/0.15)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.15)_1px,transparent_1px)] [background-size:28px_28px]" />
+      <div className="pointer-events-none absolute inset-0 opacity-25 [background-image:linear-gradient(to_right,hsl(var(--primary)/0.08)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.08)_1px,transparent_1px)] [background-size:24px_24px]" />
 
       <div className="container mx-auto px-4 py-24 relative z-10">
         {/* Trust badges */}
