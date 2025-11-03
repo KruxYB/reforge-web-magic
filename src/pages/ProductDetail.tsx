@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, Shield, Zap, Headphones, Star, ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
 import { Footer } from "@/components/Footer";
 import { useLocation } from "react-router-dom";
@@ -301,6 +301,18 @@ const ProductDetail = () => {
   const current = productMap[slug as keyof typeof productMap] ?? productMap["rust-internal"];
 
   const packages = current.packages;
+
+  // Ensure a valid default selected package per product
+  useEffect(() => {
+    const ids = packages.map((p) => p.id);
+    if (!ids.includes(selectedPackage)) {
+      setSelectedPackage(packages[0]?.id);
+    }
+    // Also re-init SellHub when the dialog may open for a new variant
+    if ((window as any).SellHub?.init) {
+      try { (window as any).SellHub.init(); } catch {}
+    }
+  }, [slug]);
 
   const featureSections = {
     TESTED_ON: ["Works for all games."],

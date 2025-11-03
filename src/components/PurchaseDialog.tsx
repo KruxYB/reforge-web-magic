@@ -19,33 +19,9 @@ export const PurchaseDialog = ({
   variantId,
 }: PurchaseDialogProps) => {
   useEffect(() => {
-    // Load SellHub script when dialog opens
-    if (open) {
-      const existingScript = document.querySelector('script[src*="sellhub"]');
-      
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.sellhub.cx/embed/v1/sellhub.js';
-        script.async = true;
-        script.onload = () => {
-          console.log('SellHub script loaded successfully');
-        };
-        script.onerror = () => {
-          console.error('Failed to load SellHub script (primary host)');
-          const alt = document.createElement('script');
-          alt.src = 'https://sellhub.cx/embed/v1/sellhub.js';
-          alt.async = true;
-          alt.onload = () => console.log('SellHub script loaded from backup host');
-          alt.onerror = () => console.error('Failed to load SellHub script (backup host)');
-          document.body.appendChild(alt);
-        };
-        document.body.appendChild(script);
-      } else {
-        // Script already exists, trigger a re-scan if SellHub is available
-        if ((window as any).SellHub?.init) {
-          (window as any).SellHub.init();
-        }
-      }
+    // Initialize SellHub (script loaded globally in index.html)
+    if (open && (window as any).SellHub?.init) {
+      try { (window as any).SellHub.init(); } catch {}
     }
   }, [open]);
 
@@ -93,20 +69,6 @@ export const PurchaseDialog = ({
           <div className="border-t pt-4">
             <button
               data-sellhub-variant={variantId}
-              onClick={(e) => {
-                const sh = (window as any).SellHub;
-                if (sh?.init) {
-                  try { sh.init(); } catch {}
-                  // In case listeners aren't attached yet, trigger a synthetic click on a temporary element
-                  const tmp = document.createElement('button');
-                  tmp.setAttribute('data-sellhub-variant', String(variantId));
-                  document.body.appendChild(tmp);
-                  setTimeout(() => { try { tmp.click(); } catch {} tmp.remove(); }, 0);
-                } else {
-                  // Fallback: open store in new tab
-                  window.open('https://sgcheats.sellhub.cx', '_blank', 'noopener,noreferrer');
-                }
-              }}
               style={{
                 borderRadius: '10px',
                 backgroundColor: '#ffffff',
