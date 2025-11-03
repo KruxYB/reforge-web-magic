@@ -9,24 +9,26 @@ export const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 border-y border-border">
+    <section className="py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center animate-in fade-in slide-in-from-bottom-4 duration-700"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex justify-center mb-4">
-                <stat.icon className={`h-8 w-8 ${stat.color}`} />
+        <div className="max-w-5xl mx-auto border-t border-border/60 pt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center animate-in fade-in slide-in-from-bottom-4 duration-700"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <stat.icon className={`h-5 w-5 ${stat.color}`} />
+                  <div className={`text-2xl md:text-3xl font-bold ${stat.color}`}>
+                    {stat.value}
+                  </div>
+                </div>
+                <div className="text-xs text-muted-foreground">{stat.label}</div>
               </div>
-              <div className={`text-4xl md:text-5xl font-bold mb-2 ${stat.color}`}>
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
