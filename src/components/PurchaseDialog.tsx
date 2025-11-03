@@ -68,21 +68,15 @@ export const PurchaseDialog = ({
 
           <div className="border-t pt-4">
             <button
-              data-sellhub-variant={variantId}
-              data-sellhub-store-url="https://sgcheats.sellhub.cx"
               onClick={() => {
-                // Fallback to ensure embeds script catches dynamically rendered button
                 try {
-                  const tmp = document.createElement('button');
-                  tmp.setAttribute('data-sellhub-variant', String(variantId));
-                  tmp.setAttribute('data-sellhub-store-url', 'https://sgcheats.sellhub.cx');
-                  tmp.style.display = 'none';
-                  document.body.appendChild(tmp);
-                  tmp.click();
-                  setTimeout(() => tmp.remove(), 0);
+                  document.dispatchEvent(
+                    new CustomEvent('sellhubButtonClick', {
+                      detail: { variant: variantId },
+                    })
+                  );
                 } catch (e) {
-                  console.warn('SellHub fallback click failed', e);
-                  window.open('https://sgcheats.sellhub.cx', '_blank', 'noopener,noreferrer');
+                  console.warn('SellHub event dispatch failed', e);
                 }
               }}
               style={{
