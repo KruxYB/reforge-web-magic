@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Shield, Zap, Headphones, Star } from "lucide-react";
+import { CheckCircle2, Shield, Zap, Headphones, Star, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
 import { Footer } from "@/components/Footer";
@@ -257,14 +257,10 @@ const ProductDetail = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <Button size="lg" className="flex-1">
-                  Buy with card
-                </Button>
-                <Button size="lg" variant="outline" className="flex-1">
-                  Buy with crypto
-                </Button>
-              </div>
+              <Button size="lg" className="w-full">
+                <ShoppingCart className="mr-2 h-5 w-5" />
+                Purchase
+              </Button>
             </div>
           </div>
 
