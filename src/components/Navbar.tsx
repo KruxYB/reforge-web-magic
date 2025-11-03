@@ -1,4 +1,4 @@
-import { Shield, Home, Package, BookOpen, Activity, Gift, HelpCircle } from "lucide-react";
+import { Shield, Home, Package, BookOpen, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
@@ -29,14 +29,6 @@ export const Navbar = () => {
             <a href="/status" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Activity className="h-4 w-4" />
               Status
-            </a>
-            <a href="#vouches" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
-              <Gift className="h-4 w-4" />
-              Vouches
-            </a>
-            <a href="#faq" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
-              <HelpCircle className="h-4 w-4" />
-              FAQ
             </a>
           </div>
 

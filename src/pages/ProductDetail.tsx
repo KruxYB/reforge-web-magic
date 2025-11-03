@@ -158,10 +158,10 @@ const ProductDetail = () => {
           <Card className="p-8 mb-12 border-border/50">
             <h2 className="text-2xl font-bold mb-6 text-primary">Product Features</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-primary">AIM</h3>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-2">
                   {features.aim.map((feature, index) => (
                     <div key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -173,7 +173,7 @@ const ProductDetail = () => {
 
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-primary">VISUALS</h3>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-2">
                   {features.visuals.map((feature, index) => (
                     <div key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -182,18 +182,18 @@ const ProductDetail = () => {
                   ))}
                 </div>
               </div>
-            </div>
 
-            <div className="mt-8 pt-8 border-t border-border">
-              <h3 className="text-xl font-semibold mb-4 text-primary">GENERAL</h3>
-              <div className="space-y-3">
-                <div>
-                  <span className="font-medium">AC Supported: </span>
-                  <span className="text-muted-foreground">We're completely undetected across any AC.</span>
-                </div>
-                <div>
-                  <span className="font-medium">Windows Versions We Support: </span>
-                  <span className="text-muted-foreground">We Support All Windows 10 and All Windows 11 Versions ranging from 1909 - 24h2</span>
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-xl font-semibold mb-4 text-primary">GENERAL</h3>
+                <div className="space-y-3">
+                  <div>
+                    <span className="font-medium">AC Supported: </span>
+                    <span className="text-muted-foreground">We're completely undetected across any AC.</span>
+                  </div>
+                  <div>
+                    <span className="font-medium">Windows Versions We Support: </span>
+                    <span className="text-muted-foreground">We Support All Windows 10 and All Windows 11 Versions ranging from 1909 - 24h2</span>
+                  </div>
                 </div>
               </div>
             </div>

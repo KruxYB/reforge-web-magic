@@ -2,6 +2,9 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { StatsSection } from "@/components/StatsSection";
 import { ProductsSection } from "@/components/ProductsSection";
+import { FAQSection } from "@/components/FAQSection";
+import { PaymentMethodsSection } from "@/components/PaymentMethodsSection";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -10,6 +13,9 @@ const Index = () => {
       <HeroSection />
       <StatsSection />
       <ProductsSection />
+      <FAQSection />
+      <PaymentMethodsSection />
+      <Footer />
     </div>
   );
 };
