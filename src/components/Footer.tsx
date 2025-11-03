@@ -135,7 +135,7 @@ export const Footer = () => {
               © 2025 SG Cheats. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              Made with <span className="text-primary">💜</span> for gamers worldwide
+              Made with <span className="text-primary">💙</span> for gamers worldwide
             </p>
           </div>
         </div>
