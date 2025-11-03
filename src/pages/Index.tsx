@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import { StatsSection } from "@/components/StatsSection";
 import { ProductsSection } from "@/components/ProductsSection";
 import { FAQSection } from "@/components/FAQSection";
 // removed PaymentMethodsSection per request
@@ -11,7 +10,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <StatsSection />
+      
       <ProductsSection />
       <FAQSection />
       

@@ -66,9 +66,48 @@ export const HeroSection = () => {
           <Button size="lg" className="text-base px-8" asChild>
             <Link to="/products">View our Store →</Link>
           </Button>
-          <Button size="lg" variant="outline" className="text-base px-8 border-primary/50 hover:bg-primary/10" asChild>
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-base px-8 border-primary/50 hover:bg-primary/10"
+            asChild
+          >
             <Link to="/status">Check Status</Link>
           </Button>
+        </div>
+
+        {/* Stats row inside hero */}
+        <div className="mt-10 max-w-5xl mx-auto border-t border-border/60 pt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Activity className="h-5 w-5 text-primary" />
+                <div className="text-2xl md:text-3xl font-bold text-primary">99.9%</div>
+              </div>
+              <div className="text-xs text-muted-foreground">Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Package className="h-5 w-5 text-primary" />
+                <div className="text-2xl md:text-3xl font-bold text-primary">15,931</div>
+              </div>
+              <div className="text-xs text-muted-foreground">Products Sold</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Star className="h-5 w-5 text-primary" />
+                <div className="text-2xl md:text-3xl font-bold text-primary">4.98</div>
+              </div>
+              <div className="text-xs text-muted-foreground">Average Rating</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Headphones className="h-5 w-5 text-primary" />
+                <div className="text-2xl md:text-3xl font-bold text-primary">24/7</div>
+              </div>
+              <div className="text-xs text-muted-foreground">Support</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
