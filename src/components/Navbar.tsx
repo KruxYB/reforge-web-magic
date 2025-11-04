@@ -1,5 +1,6 @@
 import { Home, Package, HelpCircle, Activity, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import sgLogo from "@/assets/sg-logo.png";
 
 export const Navbar = () => {
@@ -8,27 +9,27 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Left: Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img src={sgLogo} alt="SG Cheats" className="h-8 w-8" />
             <span className="text-xl font-bold">
               SG <span className="text-primary">Cheats</span>
             </span>
-          </div>
+          </Link>
 
           {/* Center: Nav Links */}
           <div className="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
-            <a href="/" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            <Link to="/" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Home className="h-4 w-4" />
               Home
-            </a>
-            <a href="/products" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/products" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Package className="h-4 w-4" />
               Products
-            </a>
-            <a href="/status" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/status" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Activity className="h-4 w-4" />
               Status
-            </a>
+            </Link>
             <a href="/#faq" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <HelpCircle className="h-4 w-4" />
               FAQ
@@ -36,9 +37,15 @@ export const Navbar = () => {
           </div>
 
           {/* Right: Discord Button */}
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            <MessageCircle className="h-4 w-4 mr-2" />
-            Discord
+          <Button 
+            asChild
+            variant="outline" 
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            <a href="https://discord.gg/vKQvF7ZChH" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="h-4 w-4 mr-2" />
+              Discord
+            </a>
           </Button>
         </div>
       </div>

@@ -33,13 +33,17 @@ export const Footer = () => {
               </p>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://discord.gg/vKQvF7ZChH"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center hover:bg-primary/10 transition-colors"
                 >
                   <MessageCircle className="h-4 w-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://discord.gg/vKQvF7ZChH"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center hover:bg-primary/10 transition-colors"
                 >
                   <Send className="h-4 w-4" />
@@ -106,22 +110,22 @@ export const Footer = () => {
               <h3 className="font-semibold text-lg mb-4 text-primary">Support</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href="https://discord.gg/vKQvF7ZChH" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href="https://discord.gg/vKQvF7ZChH" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                     Terms of Service
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href="https://discord.gg/vKQvF7ZChH" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href="https://discord.gg/vKQvF7ZChH" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                     Refund Policy
                   </a>
                 </li>
