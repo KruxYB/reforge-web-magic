@@ -18,8 +18,8 @@ const ProductDetail = () => {
   const slug = location.pathname.replace("/", "");
 
   const productMap = {
-    "rust-internal": {
-      name: "Rust Internal",
+    "rust-external": {
+      name: "Rust External",
       images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
       anticheat: "EAC",
       packages: [
@@ -66,17 +66,6 @@ const ProductDetail = () => {
         { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
       ],
       starting: "$5.99",
-    },
-    "bo6-unlock-all": {
-      name: "BO6 Unlock All",
-      images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
-      anticheat: "Ricochet",
-      packages: [
-        { id: "7day", name: "7 Days", days: 7, price: "$14.99" },
-        { id: "30day", name: "30 Days", days: 30, price: "$24.99" },
-        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
-      ],
-      starting: "$14.99",
     },
     "fortnite-ultimate": {
       name: "Fortnite Ultimate",
@@ -298,7 +287,7 @@ const ProductDetail = () => {
     },
   } as const;
 
-  const current = productMap[slug as keyof typeof productMap] ?? productMap["rust-internal"];
+  const current = productMap[slug as keyof typeof productMap] ?? productMap["rust-external"];
 
   const packages = current.packages;
 

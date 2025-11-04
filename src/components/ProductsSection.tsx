@@ -14,7 +14,7 @@ export const ProductsSection = () => {
       link: "/fortnite-ultimate",
     },
     {
-      title: "Rust Internal",
+      title: "Rust External",
       image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
@@ -23,7 +23,7 @@ export const ProductsSection = () => {
       price: "$14.99",
       featured: true,
       featuredText: "CUSTOMER FAVORITE",
-      link: "/rust-internal",
+      link: "/rust-external",
     },
     {
       title: "Perm Spoofer",

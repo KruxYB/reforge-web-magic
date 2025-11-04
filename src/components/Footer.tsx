@@ -79,23 +79,23 @@ export const Footer = () => {
               <h3 className="font-semibold text-lg mb-4 text-primary">Popular Products</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/valorant" className="text-muted-foreground hover:text-primary transition-colors">
-                    Valorant
+                  <Link to="/valorant-colorbot" className="text-muted-foreground hover:text-primary transition-colors">
+                    Valorant Colorbot
                   </Link>
                 </li>
                 <li>
-                  <Link to="/hwid-spoofer" className="text-muted-foreground hover:text-primary transition-colors">
-                    HWID Unban
+                  <Link to="/perm-spoofer" className="text-muted-foreground hover:text-primary transition-colors">
+                    Perm Spoofer
                   </Link>
                 </li>
                 <li>
-                  <Link to="/rust" className="text-muted-foreground hover:text-primary transition-colors">
-                    Rust
+                  <Link to="/rust-external" className="text-muted-foreground hover:text-primary transition-colors">
+                    Rust External
                   </Link>
                 </li>
                 <li>
-                  <Link to="/black-ops-6" className="text-muted-foreground hover:text-primary transition-colors">
-                    BO6/WZ External
+                  <Link to="/predator-cs2" className="text-muted-foreground hover:text-primary transition-colors">
+                    Predator CS2
                   </Link>
                 </li>
               </ul>

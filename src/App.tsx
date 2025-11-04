@@ -22,11 +22,10 @@ const App = () => (
           <Route path="/products" element={<Products />} />
           <Route path="/status" element={<Status />} />
           <Route path="/rust" element={<ProductDetail />} />
-          <Route path="/rust-internal" element={<ProductDetail />} />
+          <Route path="/rust-external" element={<ProductDetail />} />
           <Route path="/mek-rust" element={<ProductDetail />} />
           <Route path="/disconnect-rust" element={<ProductDetail />} />
           <Route path="/bo6-internal" element={<ProductDetail />} />
-          <Route path="/bo6-unlock-all" element={<ProductDetail />} />
           <Route path="/zeroaim-bo6" element={<ProductDetail />} />
           <Route path="/fortnite-ultimate" element={<ProductDetail />} />
           <Route path="/disconnect-fortnite" element={<ProductDetail />} />

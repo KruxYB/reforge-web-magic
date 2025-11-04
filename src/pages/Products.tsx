@@ -9,7 +9,7 @@ const Products = () => {
   const products = [
     // Rust Products
     {
-      title: "Rust Internal",
+      title: "Rust External",
       category: "rust",
       image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
       anticheat: "EAC",
@@ -17,7 +17,7 @@ const Products = () => {
       lastDetection: "Never",
       lastUpdate: "few days ago",
       price: "$14.99",
-      link: "/rust-internal",
+      link: "/rust-external",
     },
     {
       title: "Mek Rust",
@@ -52,17 +52,6 @@ const Products = () => {
       lastUpdate: "few days ago",
       price: "$5.99",
       link: "/bo6-internal",
-    },
-    {
-      title: "BO6 Unlock All",
-      category: "bo6",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
-      anticheat: "Ricochet",
-      features: ["Tournament/Ranked", "Windows 10/11"],
-      lastDetection: "Never",
-      lastUpdate: "few days ago",
-      price: "$14.99",
-      link: "/bo6-unlock-all",
     },
     // Fortnite Products
     {
