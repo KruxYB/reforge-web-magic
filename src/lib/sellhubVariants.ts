@@ -74,6 +74,23 @@ export const sellhubVariants: Record<string, Record<string, string>> = {
     "7day": "95d078c1-ed05-45ac-8a22-6a7f5cbddc91",
     "30day": "15aa3a16-258e-4fe0-b5de-d2a776c7e73b",
   },
+  "perm-spoofer": {
+    "onetime": "08916cdd-554f-417a-ba66-58c65a334d97",
+    "lifetime": "fd3c7a08-89f2-4ef5-91dd-7abfd7204eec",
+  },
+  "exodus-temp-spoofer": {
+    "1day": "a1b1d70d-807d-47ab-aeb2-2bb03867d8a1",
+    "3day": "b3470c57-bde5-435c-8bde-18ab98455ad5",
+    "7day": "8515ceb6-871f-4381-8d0a-0bd0423375ea",
+    "30day": "457839df-fcf3-4e6f-b9a3-dbd3f755f9a5",
+  },
+  "disconnect-fortnite": {
+    "1day": "a62a813f-9596-425c-b95d-61f0d7266ea3",
+    "3day": "431b7b83-2537-45d4-a207-94c94e78a5c8",
+    "7day": "9f3e3d5d-065a-4a4c-94b1-07ab452c3a5d",
+    "30day": "0e14c993-fd9d-4d2b-9539-21c32f3ec7aa",
+    "lifetime": "e21cabdc-80d5-4ba7-87c0-0f96b978538e",
+  },
 };
 
 export const getVariantId = (productSlug: string, packageId: string): string | null => {
