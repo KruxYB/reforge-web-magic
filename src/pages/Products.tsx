@@ -70,6 +70,17 @@ const Products = () => {
       price: "$5.99",
       link: "/bo6-internal",
     },
+    {
+      title: "BO6 External",
+      category: "bo6",
+      image: bo6InternalImg,
+      anticheat: "Ricochet",
+      features: ["Tournament/Ranked", "Windows 10/11"],
+      lastDetection: "Never",
+      lastUpdate: "few days ago",
+      price: "$5.99",
+      link: "/bo6-external",
+    },
     // Fortnite Products
     {
       title: "Fortnite Ultimate",

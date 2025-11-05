@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/mek-rust" element={<ProductDetail />} />
           <Route path="/disconnect-rust" element={<ProductDetail />} />
           <Route path="/bo6-internal" element={<ProductDetail />} />
+          <Route path="/bo6-external" element={<ProductDetail />} />
           <Route path="/zeroaim-bo6" element={<ProductDetail />} />
           <Route path="/fortnite-ultimate" element={<ProductDetail />} />
           <Route path="/disconnect-fortnite" element={<ProductDetail />} />
