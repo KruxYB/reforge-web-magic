@@ -84,6 +84,18 @@ const ProductDetail = () => {
       ],
       starting: "$5.99",
     },
+    "bo6-external": {
+      name: "BO6 External",
+      images: [bo6InternalImg, bo6InternalImg],
+      anticheat: "Ricochet",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$17.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$34.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$59.99" },
+      ],
+      starting: "$5.99",
+    },
     "fortnite-ultimate": {
       name: "Fortnite Ultimate",
       images: [fortniteUltimateImg, fortniteUltimateImg],
@@ -619,6 +631,36 @@ const ProductDetail = () => {
         items: ["Unlock All Items", "Camo & Attachment Saver", "Clean Account Screenshots", "Unlock/Revert Items", "Bypass Name Profanity Filter", "Custom Clantag"],
       },
     ],
+    "bo6-external": [
+      {
+        title: "General Information",
+        items: ["External cheat with advanced features", "Controller support available"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11"],
+      },
+      {
+        title: "Aimbot Tab",
+        items: ["Aimbot [Toggle]", "Max Range [Adjustable – 300]", "Bind Action [Custom keybind]", "Smoothness [Adjustable – 5]", "Downed Target [Toggle]", "Visible Target [Toggle]", "Single Lock [Toggle]", "Line to Target [Toggle]", "Field of View (FOV) [Adjustable – 200]", "Draw FOV [Toggle]", "Target Team [Toggle]", "Enable Controller [Toggle]", "Controller Smoothness [Adjustable – 40]", "Bind List [e.g., bLeftTrigger]", "Aimbot Modes: ESP Only, Legit, Semi-Legit, Rage"],
+      },
+      {
+        title: "Radar Tab",
+        items: ["Enable Radar [Toggle]", "No Background [Toggle]", "Draw Local [Toggle]", "Draw Arrow [Toggle]", "Draw Team [Toggle]"],
+      },
+      {
+        title: "ESP Tab (Visuals)",
+        items: ["Enable ESP [Toggle]", "Draw Box [Toggle]", "Max Range [Adjustable – 200]", "Draw Bones [Toggle]", "Line to Target [Toggle]", "Draw Name [Toggle]", "Draw Distance [Toggle]", "Draw Healthbar [Toggle]", "Draw Stance Info [Toggle]", "Target Visibility [Toggle]", "Player Weapon [Toggle]", "Draw Team [Toggle]"],
+      },
+      {
+        title: "Items Tab (Loot ESP)",
+        items: ["Enable [Toggle]", "Distance [Toggle]", "Max Range [Adjustable – 200]", "Minimum Rarity [Dropdown – e.g., Common]", "Cash [Toggle]", "Bag [Toggle]", "Armor Plates [Toggle]", "Storage Containers [Toggle]", "Armor Box [Toggle]", "Ammo Box [Toggle]", "Killstreaks [Toggle]", "Specialist [Toggle]", "Self Revive Kits [Toggle]", "Gas Mask [Toggle]", "Weapon [Toggle]", "Ammo [Toggle]"],
+      },
+      {
+        title: "Profiles Tab",
+        items: ["Save and load multiple configuration profiles", "Profile Slots 1-7 (F1-F7 hotkeys)", "Save: Store current settings to a profile", "Load: Apply saved profile instantly"],
+      },
+    ],
     "predator-cs2": [
       {
         title: "General Information",
@@ -738,6 +780,7 @@ const ProductDetail = () => {
     "mek-rust": "Get undetected Rust cheats featuring aimbot, wallhacks and more. Dominate your games safely and efficiently",
     "disconnect-rust": "Get undetected Rust cheats featuring aimbot, wallhacks and more. Dominate your games safely and efficiently",
     "bo6-internal": "Get undetected Black Ops 6 cheats featuring aimbot, ESP and more. Dominate your matches safely and efficiently",
+    "bo6-external": "Get undetected Black Ops 6 external cheats featuring aimbot, radar, ESP and more. Dominate your matches safely and efficiently",
     "fortnite-ultimate": "Get undetected Fortnite cheats featuring aimbot, ESP and more. Dominate your matches safely and efficiently",
     "disconnect-fortnite": "Get undetected Fortnite cheats featuring aimbot, ESP and more. Dominate your matches safely and efficiently",
     "inferno-r6": "Get undetected Rainbow Six Siege cheats featuring aimbot, ESP and more. Dominate your matches safely and efficiently",

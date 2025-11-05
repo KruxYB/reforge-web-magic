@@ -62,6 +62,12 @@ export const sellhubVariants: Record<string, Record<string, string>> = {
     "7day": "3b12746f-acce-4c22-ba7e-ef7cc6e76bcd",
     "30day": "38b84915-ee7f-4de3-aa5c-16a47c2f7d79",
   },
+  "bo6-external": {
+    "1day": "0767d8be-5289-4dd7-b62d-8d1ea8ae0d4f",
+    "7day": "ae5483e0-ecdf-40b9-afb8-3c44e52c676a",
+    "30day": "caefcc2a-2e90-4abe-9e5c-b0fbb5ba7e40",
+    "lifetime": "81a337ee-2ccd-4042-a094-fe0f554b9441",
+  },
   "disconnect-rust": {
     "1day": "9d018465-ef0a-4294-8ebf-a6dd383fa99b",
     "3day": "f64ef5f6-4e32-4097-9bc5-765845dacd05",
