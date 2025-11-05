@@ -18,6 +18,8 @@ import exodusApexImg from "@/assets/apex_legends_exodus.png";
 import predatorMarvelRivalsImg from "@/assets/marvel_rivals_predator.png";
 import predatorCs2Img from "@/assets/cs2_predator.png";
 import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
+import valorantColorbotImg from "@/assets/Valorant_Colorbot.png";
+import exodusTempSpooferImg from "@/assets/Exodus_Temp_Spoofer.png";
 
 const Products = () => {
   const [selectedGame, setSelectedGame] = useState<string>("all");
@@ -163,7 +165,7 @@ const Products = () => {
     {
       title: "Valorant Colorbot",
       category: "valorant",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
+      image: valorantColorbotImg,
       anticheat: "Vanguard",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -188,7 +190,7 @@ const Products = () => {
     {
       title: "Exodus Temp Spoofer",
       category: "spoofer",
-      image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
+      image: exodusTempSpooferImg,
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",

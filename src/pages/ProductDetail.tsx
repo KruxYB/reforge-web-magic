@@ -24,6 +24,8 @@ import exodusApexImg from "@/assets/apex_legends_exodus_hero.png";
 import predatorMarvelRivalsImg from "@/assets/marvel_rivals_predator.png";
 import predatorCs2Img from "@/assets/cs2_predator.png";
 import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
+import valorantColorbotImg from "@/assets/Valorant_Colorbot.png";
+import exodusTempSpooferImg from "@/assets/Exodus_Temp_Spoofer.png";
 
 const ProductDetail = () => {
   const [selectedPackage, setSelectedPackage] = useState("week");
@@ -180,7 +182,7 @@ const ProductDetail = () => {
     },
     "valorant-colorbot": {
       name: "Valorant Colorbot",
-      images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
+      images: [valorantColorbotImg, valorantColorbotImg],
       anticheat: "Vanguard",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
@@ -202,7 +204,7 @@ const ProductDetail = () => {
     },
     "exodus-temp-spoofer": {
       name: "Exodus Temp Spoofer",
-      images: ["https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80", "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80"],
+      images: [exodusTempSpooferImg, exodusTempSpooferImg],
       anticheat: "ALL AC",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$3.99" },
