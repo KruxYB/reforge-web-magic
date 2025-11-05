@@ -320,33 +320,218 @@ const ProductDetail = () => {
     }
   }, [slug]);
 
-  const featureSections = {
-    TESTED_ON: ["Works for all games."],
-    SERVICES: [
-      "Instant Delivery",
-      "HWID Unban Guide for All Games",
-      "VPK Bypass – TPM / Secure Boot / HVCI",
-      "Customer Community Chat",
-      "24/7 Customer Support",
-      "One Click Unban – Automated",
-      "E Plan Fix",
-      "Customer HWID Reset Tool",
+  const productFeatures: Record<string, Array<{ title: string; items: string[] }>> = {
+    "valorant-colorbot": [
+      {
+        title: "General Information",
+        items: ["High quality aimbot + triggerbot", "Great Performance", "Fully External"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10/11"],
+      },
+      {
+        title: "Features",
+        items: ["Aim Assist", "Flickbot", "Custom Settings", "Custom FOV", "Custom Aimbind", "Custom RCS (Recoil Control System)", "Customizable Triggerbot"],
+      },
     ],
-    SUPPORTED_MOTHERBOARDS: ["All motherboards are supported."],
+    "fortnite-ultimate": [
+      {
+        title: "General Information",
+        items: ["Streamproof", "Stretched Res Support", "Controller Support"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11"],
+      },
+      {
+        title: "Aimbot",
+        items: ["Enable", "FOV", "Smoothing", "Target Bone", "First & Second Keybind", "Configure by weapon", "FOV Circle", "Aimbot Distance", "Prediction", "Target Switch", "Visibility Check", "Ignore NPC", "Ignore Knocked", "FOV Color"],
+      },
+      {
+        title: "Triggerbot",
+        items: ["Enable", "Delay", "Auto Fire", "Keybind", "Only Shotgun", "Distance Slider"],
+      },
+      {
+        title: "Visuals",
+        items: ["Box", "Skeleton", "Head", "Distance", "Platform", "Name", "Weapon Name", "Rank", "Off Screen Arrow", "Off Screen", "Team Check", "Skeleton/Box Thickness"],
+      },
+    ],
+    "r6-unlock-all": [
+      {
+        title: "General Information",
+        items: ["Unlock All", "Server sided", "Works while using other products"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11", "All overlays must be disabled"],
+      },
+      {
+        title: "Unlock All",
+        items: ["Skins", "Charms", "Elites", "Operators & outfits", "Banners", "Drone skins", "and more!"],
+      },
+    ],
+    "mek-rust": [
+      {
+        title: "General Information",
+        items: ["Streamproof", "Unique Bypass", "Fully External"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11"],
+      },
+      {
+        title: "Aimbot",
+        items: ["Silent Aim (with Hit Chance)", "Memory Aim (with Smoothing)", "Aimbot Key Binding", "Field of View controls"],
+      },
+      {
+        title: "Visuals",
+        items: ["All options below are customizable", "Player ESP", "Teammate ESP", "Chams", "Resources", "Crates", "Weapons & Corpses", "World Colors"],
+      },
+      {
+        title: "Misc",
+        items: ["Fast Loot", "No Fall Damage", "Spider-Man", "Infinite Jump", "Remove Player Collision", "Shoot Mounted", "Jump Shoot", "Zoom", "FOV Modification", "Interactive/Debug Cam", "Remove Layers", "Head Hitbox Override", "One Shot Eoka", "No Spread", "Fast Projectile", "Recoil Control", "Remove Weapon Punch", "Thick Bullet"],
+      },
+      {
+        title: "Settings",
+        items: ["Bright Night", "Change World Time", "Panic Key", "Combat Key", "Configuration Management: Create, Refresh, Load, Save, Delete configurations"],
+      },
+    ],
+    "predator-marvel-rivals": [
+      {
+        title: "General Information",
+        items: ["Great for legit-rage", "Amazing Visuals", "Smooth Aimbot", "Undetected"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11"],
+      },
+      {
+        title: "Aimbot",
+        items: ["Enable", "Hit Groups (Enemy Body Parts)", "FOV", "Smooth", "Filters (Behind the walls, Distance)", "FOV type (Static, Dynamic)"],
+      },
+      {
+        title: "Visuals",
+        items: ["Players (Self, Teammates, Enemies)", "Preview (ESP preview)", "Box", "Distance", "Health bar", "Nickname", "Hero name", "Ultimate charge", "Only visible", "Skeleton"],
+      },
+      {
+        title: "Other",
+        items: ["Draw FOV", "Watermark", "Keybind list", "Radar (Out of view, Scale, Alpha)"],
+      },
+    ],
+    "exodus-delta-force": [
+      {
+        title: "General Information",
+        items: ["External Product", "Spoofer Included"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11", "16gb ram ++"],
+      },
+      {
+        title: "Aimbot",
+        items: ["General", "Enabled AimBot", "Aim Type (Static; Curved)", "Aim key ( key 1 and key 2)", "Fov", "Draw FOV", "Smooth", "Target", "Bone", "Force Bone", "Force key", "Only Visible", "Lock Target", "Lock Knocked"],
+      },
+      {
+        title: "Visuals",
+        items: ["Player", "Draw distance (slider)", "Esp Box (visible and invisible color)", "Esp Skeleton (visible and invisible color)", "Skeleton Thickness (slider)", "Esp Health", "Esp Line", "Esp Nick: color", "Esp Distance: color", "Additional Info", "Esp Team", "Esp Kills", "Enable Radar", "Radar size (slider)", "Draw Player: color"],
+      },
+      {
+        title: "Radar",
+        items: ["Enable", "Players: color", "AI", "Team: color"],
+      },
+      {
+        title: "Object Setup",
+        items: ["Enable: color", "Draw Name", "Draw distance", "Limit Distance (slider)"],
+      },
+      {
+        title: "Misc",
+        items: ["Show FPS", "FPS Locker (slider)", "Language settings (English and Chinese)"],
+      },
+      {
+        title: "Config",
+        items: ["Save settings", "Load settings", "Delete settings"],
+      },
+    ],
+    "predator-cs2": [
+      {
+        title: "General Information",
+        items: ["Best Legit Cheat For CS2", "Amazing Visuals / Performance / Menu"],
+      },
+      {
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11"],
+      },
+      {
+        title: "Aimbot",
+        items: ["Enable", "Hit Groups (enemy body parts)", "FOV Type", "FOV (viewing angle)", "Smooth", "Auto Wall (shoot through walls)", "Filters: Friendly Fire, Ignore Smoke, Ignore Flash", "RCS (Recoil Control): Pitch, Yaw, Start Bullet", "Delays", "Target Selection"],
+      },
+      {
+        title: "Triggerbot",
+        items: ["Enable", "Hit Groups", "Friendly Fire", "Only Scoped", "Ignore Smoke", "Ignore Flash", "Hitchance"],
+      },
+      {
+        title: "Visuals",
+        items: ["Preview", "Box", "Health Bar", "Armor Bar", "Nickname", "Weapon Text", "Bomb", "Defuse Kit", "Distance", "Flashed", "Scoped", "Planting", "Defusing", "Hostage", "Skeleton", "Chams", "Glow", "Out of FOV Arrows", "Items on Ground"],
+      },
+      {
+        title: "World",
+        items: ["Effects (hit/kill visuals)", "Night Mode", "Smoke Color", "Grenade Trajectory", "Grenade Warning"],
+      },
+      {
+        title: "Other",
+        items: ["C4 Timer", "Removals (smoke, sky, etc.)", "Hitmarker", "Damage Indicator", "Viewmodel (hand/weapon position)"],
+      },
+      {
+        title: "Misc",
+        items: ["SkinChanger", "Trusted Mode", "Auto Accept", "Spectator List", "Keybind List", "HitSound", "Preserve Killfeed", "Chatspam"],
+      },
+      {
+        title: "Radar",
+        items: ["External", "Scale", "Alpha (transparency)"],
+      },
+    ],
+    "rust-external": [
+      {
+        title: "Aimbot",
+        items: ["Aimbot", "Silent Aim", "Field of View (AIMBOT)", "Smoothing", "Hit Chance", "Bone Selection (Head, Chest, etc.)", "Target Friendly", "Target NPC", "Target Heli", "Terrain Check", "Lock Aim Target", "FOV Circle", "Aim Line"],
+      },
+      {
+        title: "Weapons",
+        items: ["Recoil Changer", "Spread Changer", "No Shotgun Spread", "No Sway", "Automatic Weapons", "Instant Eoka", "Instant Bow", "Instant Compound Bow", "Hitbox Override [Head/Body/Random]", "Heli Hitbox Override [Main/Tail Rotor]", "Hitbox Override Cycle Key"],
+      },
+      {
+        title: "Player ESP",
+        items: ["Box Type (Box, Corner)", "Show Skeleton", "Show Name", "Show Distance", "Show Weapon", "Show Hotbar", "Show Clothing", "Out Of FOV Info", "Aim Target", "Look Direction", "Show Friendly", "Show Team ID", "Show Sleepers", "Show NPC", "Show Ghosts", "Show Looking at Me", "Show Raids"],
+      },
+      {
+        title: "Loot ESP",
+        items: ["Advanced Underwater Crate", "Backpack", "Basic Underwater Crate", "Bradley Crate", "Diesel Barrel", "Elite Crate", "Event Collectable", "Fuel Barrel", "Hackable Crate", "Helicopter Crate", "Normal Crate", "Loot Barrel", "Medical Crate", "Military Crate", "Player Corpse", "Scientist Corpse", "Supply Drop", "Tool Crate"],
+      },
+      {
+        title: "Item ESP",
+        items: ["Weapons", "Placeables", "Items", "Resources", "Attire", "Tool", "Medical", "Food", "Ammunition", "Traps", "Misc", "Component", "Electrical", "Fun"],
+      },
+      {
+        title: "Chams",
+        items: ["Pink", "White ZTest", "Black ZTest", "Red Weave", "Blue Weave", "Aqua Weave", "Green Weave", "Yellow Weave", "Orange Weave", "Pink Weave", "Purple Weave", "White Weave", "Orange Reflect", "Lime Reflect", "Sun", "Lightning Bolt", "Fire Animated", "Censored", "Red Glow", "Green Glow", "Yellow Glow", "Bubble", "America", "Spark", "Smoke Animated", "Parachute Animated", "Slime Animated", "Slime", "Glass"],
+      },
+      {
+        title: "Misc ESP",
+        items: ["Animal ESP", "Resource ESP", "Vehicle ESP", "Food ESP", "Trap ESP"],
+      },
+      {
+        title: "Exploits",
+        items: ["Instant Loot", "Instant Revive", "Instant Untie", "Instant Pickup", "Instant Rack Reload", "Remove World Layers", "Third Person", "Zoom", "FOV Changer (player fov)", "Aspect Ratio Changer", "Full Bright", "Starry Night", "Time Changer", "Thick Bullet", "Extend Melee Range", "Melee Hit Assist", "Suicide", "Hit Sound", "Hit Tracer", "Custom Hit Material", "Spiderman", "Infinite Jump", "Fake Lag", "Anti Aim", "Always Shoot", "No Block Sprint", "No Collision", "Airstuck", "Fly Hack", "Interactive Debug", "Configs", "PlayerList", "Name", "Relation", "SteamID", "Show Base"],
+      },
+      {
+        title: "Settings & Radar",
+        items: ["Custom ESP Font", "Custom Crosshair", "Custom Menu Key", "Combat Mode", "Prefab ESP (Debug)", "Cheat Indicators", "Show Players", "Show Entities", "Radar Size Adjustment", "Max Radar Distance"],
+      },
+    ],
   };
 
-  const supportedGames = [
-    "Fortnite",
-    "Call of Duty: Black Ops 6",
-    "Apex Legends",
-    "Rust",
-    "Delta Force",
-    "Call of Duty: Warzone",
-    "Valorant",
-    "Rainbow Six Siege",
-    "CS2",
-    "Battlefield 2042",
-  ];
+  const currentFeatures = productFeatures[slug] || [];
 
 
   return (
@@ -399,59 +584,19 @@ const ProductDetail = () => {
               </Badge>
 
               {/* Product Features below the image (top-to-bottom) */}
-              <Card className="p-6 mt-6 border-border/50">
-                <h2 className="text-xl font-semibold mb-4 text-primary">Product Features</h2>
-                <div className="space-y-5">
-                  <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-2">TESTED ON</h3>
-                    <div className="space-y-2">
-                      {featureSections.TESTED_ON.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                          <span className="text-sm">{item}</span>
-                        </div>
-                      ))}
-                    </div>
+              {currentFeatures.map((section, idx) => (
+                <Card key={idx} className="p-6 mt-6 border-border/50">
+                  <h2 className="text-xl font-semibold mb-4 text-primary">{section.title}</h2>
+                  <div className="space-y-2">
+                    {section.items.map((item, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm">{item}</span>
+                      </div>
+                    ))}
                   </div>
-
-                  <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-2">SERVICES</h3>
-                    <div className="space-y-2">
-                      {featureSections.SERVICES.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                          <span className="text-sm">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-2">SUPPORTED MOTHERBOARDS</h3>
-                    <div className="space-y-2">
-                      {featureSections.SUPPORTED_MOTHERBOARDS.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                          <span className="text-sm">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Supported Games */}
-              <Card className="p-6 mt-6 border-border/50">
-                <h2 className="text-xl font-semibold mb-4 text-primary">Supported Games</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {supportedGames.map((game, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">{game}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
+                </Card>
+              ))}
             </div>
 
             {/* Product Info */}
