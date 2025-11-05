@@ -15,6 +15,7 @@ import rustExternalImg from "@/assets/RUST_External.png";
 import mekRustImg from "@/assets/RUST_Mek.png";
 import disconnectRustImg from "@/assets/RUST_Disconnect.png";
 import bo6InternalImg from "@/assets/BO6_Internal.png";
+import bo6ExternalImg from "@/assets/BO6_External.png";
 import fortniteUltimateImg from "@/assets/Fortnite_Ultimate.png";
 import disconnectFortniteImg from "@/assets/Fortnite_Disconnect.png";
 import infernoR6Img from "@/assets/R6_Inferno.png";
@@ -86,7 +87,7 @@ const ProductDetail = () => {
     },
     "bo6-external": {
       name: "BO6 External",
-      images: [bo6InternalImg, bo6InternalImg],
+      images: [bo6ExternalImg, bo6ExternalImg],
       anticheat: "Ricochet",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
