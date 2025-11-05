@@ -1,10 +1,13 @@
 import { ProductCard } from "./ProductCard";
+import fortniteUltimateImg from "@/assets/Fortnite_Ultimate.png";
+import rustExternalImg from "@/assets/RUST_External.png";
+import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
 
 export const ProductsSection = () => {
   const products = [
     {
       title: "Fortnite Ultimate",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
+      image: fortniteUltimateImg,
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -15,7 +18,7 @@ export const ProductsSection = () => {
     },
     {
       title: "Rust External",
-      image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
+      image: rustExternalImg,
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -27,7 +30,7 @@ export const ProductsSection = () => {
     },
     {
       title: "Perm Spoofer",
-      image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
+      image: permSpooferImg,
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",

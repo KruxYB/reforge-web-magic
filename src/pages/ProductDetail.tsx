@@ -10,6 +10,21 @@ import { useLocation } from "react-router-dom";
 import { PurchaseDialog } from "@/components/PurchaseDialog";
 import { getVariantId } from "@/lib/sellhubVariants";
 
+// Product Images
+import rustExternalImg from "@/assets/RUST_External.png";
+import mekRustImg from "@/assets/RUST_Mek.png";
+import disconnectRustImg from "@/assets/RUST_Disconnect.png";
+import bo6InternalImg from "@/assets/BO6_Internal.png";
+import fortniteUltimateImg from "@/assets/Fortnite_Ultimate.png";
+import disconnectFortniteImg from "@/assets/Fortnite_Disconnect.png";
+import infernoR6Img from "@/assets/R6_Inferno.png";
+import r6UnlockAllImg from "@/assets/R6_Unlock_All.png";
+import exodusDeltaForceImg from "@/assets/delta_force_exodus.png";
+import exodusApexImg from "@/assets/apex_legends_exodus_hero.png";
+import predatorMarvelRivalsImg from "@/assets/marvel_rivals_predator.png";
+import predatorCs2Img from "@/assets/cs2_predator.png";
+import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
+
 const ProductDetail = () => {
   const [selectedPackage, setSelectedPackage] = useState("week");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -20,7 +35,7 @@ const ProductDetail = () => {
   const productMap = {
     "rust-external": {
       name: "Rust External",
-      images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
+      images: [rustExternalImg, rustExternalImg],
       anticheat: "EAC",
       packages: [
         { id: "3day", name: "3 Days", days: 3, price: "$14.99" },
@@ -32,7 +47,7 @@ const ProductDetail = () => {
     },
     "mek-rust": {
       name: "Mek Rust",
-      images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
+      images: [mekRustImg, mekRustImg],
       anticheat: "EAC",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$7.99" },
@@ -45,7 +60,7 @@ const ProductDetail = () => {
     },
     "disconnect-rust": {
       name: "Disconnect Rust",
-      images: ["https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80", "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&q=80"],
+      images: [disconnectRustImg, disconnectRustImg],
       anticheat: "EAC",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$7.99" },
@@ -58,7 +73,7 @@ const ProductDetail = () => {
     },
     "bo6-internal": {
       name: "BO6 Internal",
-      images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
+      images: [bo6InternalImg, bo6InternalImg],
       anticheat: "Ricochet",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
@@ -69,7 +84,7 @@ const ProductDetail = () => {
     },
     "fortnite-ultimate": {
       name: "Fortnite Ultimate",
-      images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
+      images: [fortniteUltimateImg, fortniteUltimateImg],
       anticheat: "BattlEye",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
@@ -82,7 +97,7 @@ const ProductDetail = () => {
     },
     "disconnect-fortnite": {
       name: "Disconnect Fortnite",
-      images: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"],
+      images: [disconnectFortniteImg, disconnectFortniteImg],
       anticheat: "BattlEye",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$8.99" },
@@ -95,7 +110,7 @@ const ProductDetail = () => {
     },
     "inferno-r6": {
       name: "Inferno R6",
-      images: ["https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80", "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80"],
+      images: [infernoR6Img, infernoR6Img],
       anticheat: "BattlEye",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
@@ -106,7 +121,7 @@ const ProductDetail = () => {
     },
     "r6-unlock-all": {
       name: "R6 Unlock All",
-      images: ["https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80", "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80"],
+      images: [r6UnlockAllImg, r6UnlockAllImg],
       anticheat: "BattlEye",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$4.99" },
@@ -117,7 +132,7 @@ const ProductDetail = () => {
     },
     "exodus-delta-force": {
       name: "Exodus Delta Force",
-      images: ["https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80", "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&q=80"],
+      images: [exodusDeltaForceImg, exodusDeltaForceImg],
       anticheat: "BattlEye",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$4.99" },
@@ -129,7 +144,7 @@ const ProductDetail = () => {
     },
     "exodus-apex": {
       name: "Exodus Apex",
-      images: ["https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80", "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=1200&q=80"],
+      images: [exodusApexImg, exodusApexImg],
       anticheat: "EAC",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$3.99" },
@@ -141,7 +156,7 @@ const ProductDetail = () => {
     },
     "predator-marvel-rivals": {
       name: "Predator Marvel Rivals",
-      images: ["https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80", "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80"],
+      images: [predatorMarvelRivalsImg, predatorMarvelRivalsImg],
       anticheat: "Ricochet",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$6.99" },
@@ -153,7 +168,7 @@ const ProductDetail = () => {
     },
     "predator-cs2": {
       name: "Predator CS2",
-      images: ["https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1200&q=80", "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1200&q=80"],
+      images: [predatorCs2Img, predatorCs2Img],
       anticheat: "VAC",
       packages: [
         { id: "1day", name: "1 Day", days: 1, price: "$2.49" },
@@ -177,7 +192,7 @@ const ProductDetail = () => {
     },
     "perm-spoofer": {
       name: "Perm Spoofer",
-      images: ["https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80", "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&q=80"],
+      images: [permSpooferImg, permSpooferImg],
       anticheat: "ALL AC",
       packages: [
         { id: "onetime", name: "One-Time", days: null, price: "$19.99" },
