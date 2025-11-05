@@ -4,6 +4,21 @@ import { Footer } from "@/components/Footer";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
+// Product Images
+import rustExternalImg from "@/assets/RUST_External.png";
+import mekRustImg from "@/assets/RUST_Mek.png";
+import disconnectRustImg from "@/assets/RUST_Disconnect.png";
+import bo6InternalImg from "@/assets/BO6_Internal.png";
+import fortniteUltimateImg from "@/assets/Fortnite_Ultimate.png";
+import disconnectFortniteImg from "@/assets/Fortnite_Disconnect.png";
+import infernoR6Img from "@/assets/R6_Inferno.png";
+import r6UnlockAllImg from "@/assets/R6_Unlock_All.png";
+import exodusDeltaForceImg from "@/assets/delta_force_exodus.png";
+import exodusApexImg from "@/assets/apex_legends_exodus.png";
+import predatorMarvelRivalsImg from "@/assets/marvel_rivals_predator.png";
+import predatorCs2Img from "@/assets/cs2_predator.png";
+import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
+
 const Products = () => {
   const [selectedGame, setSelectedGame] = useState<string>("all");
   const products = [
@@ -11,7 +26,7 @@ const Products = () => {
     {
       title: "Rust External",
       category: "rust",
-      image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
+      image: rustExternalImg,
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -22,7 +37,7 @@ const Products = () => {
     {
       title: "Mek Rust",
       category: "rust",
-      image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
+      image: mekRustImg,
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -33,7 +48,7 @@ const Products = () => {
     {
       title: "Disconnect Rust",
       category: "rust",
-      image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
+      image: disconnectRustImg,
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -45,7 +60,7 @@ const Products = () => {
     {
       title: "BO6 Internal",
       category: "bo6",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
+      image: bo6InternalImg,
       anticheat: "Ricochet",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -57,7 +72,7 @@ const Products = () => {
     {
       title: "Fortnite Ultimate",
       category: "fortnite",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
+      image: fortniteUltimateImg,
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -68,7 +83,7 @@ const Products = () => {
     {
       title: "Disconnect Fortnite",
       category: "fortnite",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
+      image: disconnectFortniteImg,
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -80,7 +95,7 @@ const Products = () => {
     {
       title: "Inferno R6",
       category: "r6",
-      image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=800&q=80",
+      image: infernoR6Img,
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -91,7 +106,7 @@ const Products = () => {
     {
       title: "R6 Unlock All",
       category: "r6",
-      image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=800&q=80",
+      image: r6UnlockAllImg,
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -102,7 +117,7 @@ const Products = () => {
     {
       title: "Exodus Delta Force",
       category: "delta-force",
-      image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80",
+      image: exodusDeltaForceImg,
       anticheat: "BattlEye",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -114,7 +129,7 @@ const Products = () => {
     {
       title: "Exodus Apex",
       category: "apex",
-      image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=800&q=80",
+      image: exodusApexImg,
       anticheat: "EAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -125,7 +140,7 @@ const Products = () => {
     {
       title: "Predator Marvel Rivals",
       category: "marvel-rivals",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
+      image: predatorMarvelRivalsImg,
       anticheat: "Ricochet",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -136,7 +151,7 @@ const Products = () => {
     {
       title: "Predator CS2",
       category: "cs2",
-      image: "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=800&q=80",
+      image: predatorCs2Img,
       anticheat: "VAC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
@@ -160,7 +175,7 @@ const Products = () => {
     {
       title: "Perm Spoofer",
       category: "spoofer",
-      image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&q=80",
+      image: permSpooferImg,
       anticheat: "ALL AC",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "Never",
