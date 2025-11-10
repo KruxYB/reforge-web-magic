@@ -25,7 +25,7 @@ import exodusApexImg from "@/assets/apex_legends_exodus_hero.png";
 import predatorMarvelRivalsImg from "@/assets/marvel_rivals_predator.png";
 import predatorCs2Img from "@/assets/cs2_predator.png";
 import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
-import valorantColorbotImg from "@/assets/Valorant_Colorbot.png";
+import valorantInternalImg from "@/assets/Valorant_Internal.png";
 import exodusTempSpooferImg from "@/assets/Exodus_Temp_Spoofer.png";
 
 const ProductDetail = () => {
@@ -193,17 +193,17 @@ const ProductDetail = () => {
       ],
       starting: "$2.49",
     },
-    "valorant-colorbot": {
-      name: "Valorant Colorbot",
-      images: [valorantColorbotImg, valorantColorbotImg],
+    "valorant-internal": {
+      name: "Valorant Internal",
+      images: [valorantInternalImg, valorantInternalImg],
       anticheat: "Vanguard",
       packages: [
-        { id: "1day", name: "1 Day", days: 1, price: "$5.99" },
-        { id: "7day", name: "7 Days", days: 7, price: "$17.99" },
-        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
-        { id: "lifetime", name: "Lifetime", days: null, price: "$89.99" },
+        { id: "1day", name: "1 Day", days: 1, price: "$9.99" },
+        { id: "7day", name: "1 Week", days: 7, price: "$29.99" },
+        { id: "30day", name: "1 Month", days: 30, price: "$59.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$119.99" },
       ],
-      starting: "$5.99",
+      starting: "$9.99",
     },
     "perm-spoofer": {
       name: "Perm Spoofer",
@@ -334,18 +334,26 @@ const ProductDetail = () => {
   }, [slug]);
 
   const productFeatures: Record<string, Array<{ title: string; items: string[] }>> = {
-    "valorant-colorbot": [
+    "valorant-internal": [
       {
         title: "General Information",
-        items: ["High quality aimbot + triggerbot", "Great Performance", "Fully External"],
+        items: ["Core Isolation Support (Play With No HVCI Error)", "Unlock All Skins", "Gunbuddy Changer"],
       },
       {
         title: "Requirements",
         items: ["CPU: Intel / AMD", "OS: Windows 10/11"],
       },
       {
-        title: "Features",
-        items: ["Aim Assist", "Flickbot", "Custom Settings", "Custom FOV", "Custom Aimbind", "Custom RCS (Recoil Control System)", "Customizable Triggerbot"],
+        title: "Aimbot",
+        items: ["Enable", "Silent Aim", "Memory Aim", "Distance", "FOV", "Smoothing", "Multiplier", "Hotkey", "Bone Type IDs", "Bone Type", "Enable", "Delay", "Use Hotkey", "Fire Once", "Hotkey", "Crosshair", "Draw FOV", "Visible Check", "Recoil Control", "Disable on Spec"],
+      },
+      {
+        title: "Visuals",
+        items: ["Visuals", "Unlock All", "Enable", "Box 2D", "Skeleton", "Head", "Name Health", "Weapon", "Distance", "Dormant", "Visible Only", "Visible Check"],
+      },
+      {
+        title: "MISC",
+        items: ["Bunnyhop", "Rainbow Crosshair Toggle", "Crosshair Thickness", "General Speed Crosshair", "Crosshair Size", "Crosshair Type", "Rainbow Crosshair", "Color Gradient FOV Circle", "Recoil Crosshair for Weapons Unload"],
       },
     ],
     "fortnite-ultimate": [
@@ -790,7 +798,7 @@ const ProductDetail = () => {
     "exodus-apex": "Get undetected Apex Legends cheats featuring aimbot, ESP and more. Dominate your matches safely and efficiently",
     "predator-marvel-rivals": "Get undetected Marvel Rivals cheats featuring aimbot, ESP and more. Dominate your matches safely and efficiently",
     "predator-cs2": "Get undetected CS2 cheats featuring aimbot, ESP and more. Dominate your matches safely and efficiently",
-    "valorant-colorbot": "Get undetected Valorant colorbot featuring aimbot, triggerbot and more. Dominate your matches safely and efficiently",
+    "valorant-internal": "Get undetected Valorant internal cheats featuring aimbot, visuals, skin changer and more. Dominate your matches safely and efficiently with core isolation support",
     "perm-spoofer": "Get undetected permanent HWID spoofer. Bypass hardware bans on all games and anti-cheats permanently",
     "exodus-temp-spoofer": "Get undetected temporary HWID spoofer. Bypass hardware bans on all games and anti-cheats",
   };

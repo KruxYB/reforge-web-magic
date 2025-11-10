@@ -29,8 +29,8 @@ const Status = () => {
     },
     {
       category: "VALORANT",
-      name: "Valorant Colorbot",
-      price: "$5.99",
+      name: "Valorant Internal",
+      price: "$9.99",
       lastDetection: "9 months ago",
       week: "24/7",
       month: "24/7",
@@ -38,7 +38,7 @@ const Status = () => {
       status: "UNDETECTED",
       features: ["Undetected on Vanguard", "Tournament/Ranked", "Windows 10/11"],
       lastUpdate: "few days ago",
-      link: "/valorant-colorbot",
+      link: "/valorant-internal",
     },
     {
       category: "FORTNITE",

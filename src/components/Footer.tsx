@@ -83,8 +83,8 @@ export const Footer = () => {
               <h3 className="font-semibold text-lg mb-4 text-primary">Popular Products</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/valorant-colorbot" className="text-muted-foreground hover:text-primary transition-colors">
-                    Valorant Colorbot
+                  <Link to="/valorant-internal" className="text-muted-foreground hover:text-primary transition-colors">
+                    Valorant Internal
                   </Link>
                 </li>
                 <li>

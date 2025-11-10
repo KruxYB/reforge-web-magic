@@ -19,7 +19,7 @@ import exodusApexImg from "@/assets/apex_legends_exodus.png";
 import predatorMarvelRivalsImg from "@/assets/marvel_rivals_predator.png";
 import predatorCs2Img from "@/assets/cs2_predator.png";
 import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
-import valorantColorbotImg from "@/assets/Valorant_Colorbot.png";
+import valorantInternalImg from "@/assets/Valorant_Internal.png";
 import exodusTempSpooferImg from "@/assets/Exodus_Temp_Spoofer.png";
 
 const Products = () => {
@@ -175,15 +175,15 @@ const Products = () => {
     },
     // Valorant Products
     {
-      title: "Valorant Colorbot",
+      title: "Valorant Internal",
       category: "valorant",
-      image: valorantColorbotImg,
+      image: valorantInternalImg,
       anticheat: "Vanguard",
       features: ["Tournament/Ranked", "Windows 10/11"],
       lastDetection: "9 months ago",
       lastUpdate: "few days ago",
-      price: "$5.99",
-      link: "/valorant-colorbot",
+      price: "$9.99",
+      link: "/valorant-internal",
     },
     // Spoofer Products
     {

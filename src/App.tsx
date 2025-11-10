@@ -39,7 +39,7 @@ const App = () => (
           <Route path="/exodus-apex" element={<ProductDetail />} />
           <Route path="/predator-marvel-rivals" element={<ProductDetail />} />
           <Route path="/predator-cs2" element={<ProductDetail />} />
-          <Route path="/valorant-colorbot" element={<ProductDetail />} />
+          <Route path="/valorant-internal" element={<ProductDetail />} />
           <Route path="/perm-spoofer" element={<ProductDetail />} />
           <Route path="/exodus-temp-spoofer" element={<ProductDetail />} />
           <Route path="/valorant" element={<ProductDetail />} />

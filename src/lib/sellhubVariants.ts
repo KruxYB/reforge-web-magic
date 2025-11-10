@@ -8,7 +8,7 @@ export const sellhubVariants: Record<string, Record<string, string>> = {
     "30day": "a659771f-e25f-4ee9-b5ad-153d2bb9c463",
     "365day": "9d323ef8-ce8c-40fb-a16c-b6bb1130031c",
   },
-  "valorant-colorbot": {
+  "valorant-internal": {
     "1day": "f8335af6-0c04-4625-8ecb-4c1d1ad2eeb5",
     "7day": "d27923f3-4c1e-4121-bd12-1fef9cfa90da",
     "30day": "a00344c2-a59f-4df6-85e9-a326124d3bb3",
