@@ -97,6 +97,12 @@ export const sellhubVariants: Record<string, Record<string, string>> = {
     "30day": "0e14c993-fd9d-4d2b-9539-21c32f3ec7aa",
     "lifetime": "e21cabdc-80d5-4ba7-87c0-0f96b978538e",
   },
+  "bo7-unlock-all": {
+    "1day": "2184ca84-25c3-42ee-b53f-3bd3d7a76d31",
+    "7day": "0dd34646-b6d6-4a9e-bb87-042227d2c1b9",
+    "30day": "2cb9fa9b-190f-4c0d-8fe2-4bb15a389853",
+    "lifetime": "a95bd777-b6dc-4ff8-8d07-bc0f11f93861",
+  },
 };
 
 export const getVariantId = (productSlug: string, packageId: string): string | null => {

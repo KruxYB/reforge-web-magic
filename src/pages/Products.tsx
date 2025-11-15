@@ -21,6 +21,7 @@ import predatorCs2Img from "@/assets/cs2_predator.png";
 import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
 import valorantInternalImg from "@/assets/Valorant_Internal.png";
 import exodusTempSpooferImg from "@/assets/Exodus_Temp_Spoofer.png";
+import bo7UnlockAllImg from "@/assets/BO7_Unlock_All.png";
 
 const Products = () => {
   const [selectedGame, setSelectedGame] = useState<string>("all");
@@ -81,6 +82,17 @@ const Products = () => {
       lastUpdate: "few days ago",
       price: "$5.99",
       link: "/bo6-external",
+    },
+    {
+      title: "BO7 Unlock All",
+      category: "bo7",
+      image: bo7UnlockAllImg,
+      anticheat: "Ricochet",
+      features: ["Tournament/Ranked", "Windows 10/11"],
+      lastDetection: "Never",
+      lastUpdate: "few days ago",
+      price: "$4.99",
+      link: "/bo7-unlock-all",
     },
     // Fortnite Products
     {
@@ -216,6 +228,7 @@ const Products = () => {
     { id: "all", name: "All Products" },
     { id: "rust", name: "Rust" },
     { id: "bo6", name: "BO6" },
+    { id: "bo7", name: "BO7" },
     { id: "fortnite", name: "Fortnite" },
     { id: "r6", name: "Rainbow Six" },
     { id: "delta-force", name: "Delta Force" },

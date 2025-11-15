@@ -27,6 +27,7 @@ import predatorCs2Img from "@/assets/cs2_predator.png";
 import permSpooferImg from "@/assets/HWID_Spoofer_Perm.png";
 import valorantInternalImg from "@/assets/Valorant_Internal.png";
 import exodusTempSpooferImg from "@/assets/Exodus_Temp_Spoofer.png";
+import bo7UnlockAllImg from "@/assets/BO7_Unlock_All.png";
 
 const ProductDetail = () => {
   const [selectedPackage, setSelectedPackage] = useState("week");
@@ -122,6 +123,18 @@ const ProductDetail = () => {
         { id: "lifetime", name: "Lifetime", days: null, price: "$279.99" },
       ],
       starting: "$8.99",
+    },
+    "bo7-unlock-all": {
+      name: "BO7 Unlock All",
+      images: [bo7UnlockAllImg, bo7UnlockAllImg],
+      anticheat: "Ricochet",
+      packages: [
+        { id: "1day", name: "1 Day", days: 1, price: "$4.99" },
+        { id: "7day", name: "7 Days", days: 7, price: "$14.99" },
+        { id: "30day", name: "30 Days", days: 30, price: "$29.99" },
+        { id: "lifetime", name: "Lifetime", days: null, price: "$44.99" },
+      ],
+      starting: "$4.99",
     },
     "inferno-r6": {
       name: "Inferno R6",
@@ -387,21 +400,15 @@ const ProductDetail = () => {
         title: "Requirements",
         items: ["CPU: Intel / AMD", "OS: Windows 10 / 11"],
       },
+    ],
+    "bo7-unlock-all": [
       {
-        title: "Aimbot",
-        items: ["Aimbot", "Aimbot Prediction", "Aimbot Hitbox (Head, Neck, Chest, Pelvis)", "Aimbot Smoothing Value", "Aimbot FOV", "Aimbot Max Distance", "Different Weapon Configs", "Triggerbot", "Triggerbot Hitbox (Head, Neck, Chest, Pelvis)", "Triggerbot Delay", "Draw FOV", "Draw Filled FOV", "Aimbot Visible Check", "Aimbot Ignore Knocked", "Aimbot Ignore Team", "Aimbot Deadzone", "Aimbot Keybind", "Triggerbot Keybind", "Battlemode Toggle"],
+        title: "Features",
+        items: ["Unlock all items", "Weapons", "Attachments", "Camos", "Reticles", "& more"],
       },
       {
-        title: "Visuals",
-        items: ["Box (Full, Corner)", "Skeleton (Sharp, Bezier)", "Name", "Team ID", "Distance", "Held Weapon", "Kills", "Show Team", "Show NPC", "Filled Box", "Platform", "Snaplines (Center, Top, Bottom)", "Seperate Team ID Colors", "Radar", "Radar Team Visualizer", "Radar Automatic Distance Scaling", "Radar Background Alpha", "Radar Orientation Lock", "Radar Player Size", "Radar Radius", "Radar Distance", "Radar Enemy Color", "Radar Team Color", "Target Line"],
-      },
-      {
-        title: "Item ESP",
-        items: ["Item ESP", "Item Configs", "Show Item", "Show Name", "Show Count", "Show Rarity", "Show Distance", "Item Max Distance"],
-      },
-      {
-        title: "Settings",
-        items: ["Config System", "Overlay VSync", "ESP Font (Tahoma, Pixel, FN, Matcha)", "ESP Font Size", "ESP Outline (Drop Shadow, Full Outline, Half Outline)", "Full Controller Support"],
+        title: "Requirements",
+        items: ["CPU: Intel / AMD", "OS: Windows 10 / 11"],
       },
     ],
     "r6-unlock-all": [
@@ -801,6 +808,7 @@ const ProductDetail = () => {
     "valorant-internal": "Get undetected Valorant internal cheats featuring aimbot, visuals, skin changer and more. Dominate your matches safely and efficiently with core isolation support",
     "perm-spoofer": "Get undetected permanent HWID spoofer. Bypass hardware bans on all games and anti-cheats permanently",
     "exodus-temp-spoofer": "Get undetected temporary HWID spoofer. Bypass hardware bans on all games and anti-cheats",
+    "bo7-unlock-all": "Get instant BO7 unlock all service. Unlock all weapons, attachments, camos, reticles and more instantly",
   };
 
   const currentFeatures = productFeatures[slug] || [];
